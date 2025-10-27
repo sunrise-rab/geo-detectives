@@ -80,7 +80,98 @@ I downloaded the Background image from [FREEPIK](https://www.freepik.com/). It i
 
 My website is responsive to different layouts depending on the size of the viewport have been included in the CSS media queries. This allows visitors to experience the website as I intended on device types and screen sizes. The breakpoints I am using are from Bootstrap.
 
-![Breakpoints](docs/)
+![Breakpoints](docs/break-in-point.png)
+
+
+## Features
+
+Layout is easy to use and adheres to the best practices in formatting and styling. Players can easily navigate between questions and access additional features such as high scores and contact information.
+With a countdown timer, multiple-choice questions and real-time feedback on right and wrong responses, the quiz offers users an engaging experience. This interactive feature increases user engagement and motivates users to take knowledge tests.
+
+### Existing Features
+
+
+### Future Enhancements
+
+* Multiple player option.
+* Online scoreboard that includes all players.
+* Share results on Social Media. 
+* Option to store the progress and return to the quiz at a later time, allowing to finish it at user's pace and not lose any of the questions already completed.
+* Broaden range of animation topics such as principles of animation, software tools, and industry best practices.
+* Provide hints or additional resources for challenging questions.
+* Time-adjustable quiz where player can select a time limit for each question, all questions or have no limitless time to complete.
+
+[Back to top](#contents)
+
+## Technologies Used
+
+### Languages
+- [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5 "HTML")
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS "CSS")
+- [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript "JS")
+
+### Libraries & Framework
+
+- [Google Fonts](https://fonts.google.com/ "Google Fonts")
+- [Favicon](https://favicon.io/ "Favicon")
+
+
+### Tools
+
+* [GitHub](https://github.com/ "GitHub")
+* [Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq")
+* [Image Resize](https://squoosh.app/)
+* [Color Contrast](https://contrastgrid.com/)
+* [Open Trivia DB](https://opentdb.com/ "Open Trivia DB")
+- [Colour Palette](https://coolors.co/)
+
+
+## Testing
+
+
+
+
+
+## Deployment
+
+Geo detectives was deployed early in the process to GitHub pages via the following steps:
+
+- Navigate to the repository on GitHub and click on Settings.
+- In the side navigation and select Pages.
+- In the None dropdown and choose Main.
+- Click on the Save button.
+- The website is now live at https://sunrise-rab.github.io/geo-detectives/index.html.
+
+Any changes required to the website, they can be made, committed and pushed to GitHub.
+
+### Fork the project
+Forking the GitHub repository allows you to create a duplicate of a local repository. This is done so that modifications to the copy can be performed without compromising the original repository.
+
+- Log in to GitHub.
+- Locate the repository.
+- Click to open it.
+- The fork button is located on the right side of the repository menu.
+- To copy the repository to your GitHub account, click the button.
+  Now you have your own version you can commit, edit, and even make pull requests to the original project.
+  
+  ### To clone the project
+- Log in to GitHub.
+- Navigate to the main page of the repository and click Code.
+- Copy the URL for the repository.
+- Open your local terminal or VS Code.
+- Change the current working directory to the location where you want the cloned directory.
+- Type git clone, and then paste the URL you copied earlier.
+- Press Enter to create your local clone.
+
+## Credits
+
+
+
+
+
+
+
+
 
 
 
