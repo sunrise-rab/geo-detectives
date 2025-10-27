@@ -53,12 +53,35 @@ A clean, modern sans-serif that ensures easy readability across devices and scre
 ### Colour Palette
 
 The Geo Detectives colour scheme is inspired by map background image, I used [Coloors Image Picker](https://coolors.co/image-picker). This tool helped me combines warm earthy tones with bright highlights to create a balanced, child-friendly interface.
-![Color Scheme](palette.png)
+![Color Scheme](docs/palette.png)
 
 I have also used [Contrast Grid](https://contrastgrid.com/?xAxisData=%255B%257B%2522color%2522%253A%2522%252334190D%2522%257D%252C%257B%2522color%2522%253A%2522%2523D6CDB9%2522%257D%252C%257B%2522color%2522%253A%2522%2523C5B29A%2522%257D%252C%257B%2522color%2522%253A%2522%2523B4977A%2522%257D%252C%257B%2522color%2522%253A%2522%2523BEB0A8%2522%257D%252C%257B%2522color%2522%253A%2522%2523604A3A%2522%257D%255D) to get inspiration for possible colour combination to make the website visually appealing.
 
 
 ![Contrast Grid](docs/contrast-grid-color.png)
+
+| CSS Name                 | HEX       | Comment                                                                       |
+| ------------------------ | --------- | ----------------------------------------------------------------------------- |
+|     --deep-earth-brown   |  #34190D  | headings and font colour.                                                     |
+|     --sand-beige         |#D6CDB9    |  quiz box background.                                                         |
+|     --warm-taupe         | #C5B29A   | secondary background color                                                    |
+|     --desert-clay        | #B4977A   |buttons and highlights                                                         |
+|     --walnut-brown       | #604A3A   | footer background and subheading font colour                                  |
+|    --pale-stone          | #BEB0A8   | body background / borders colour                                              |
+| Other Colors CSS Hex     |           |                                                                               |
+|     --wrong-answer-red   | #ff3333   | Color for wrong answer button                                                 |
+|     --right-answer-green | #51BF83   | Color for correct answer button, color for check icon                         |
+
+### Images
+
+I downloaded the Background image from [FREEPIK](https://www.freepik.com/). It is a vintage-style world map used as the website’s background to reflect the theme of exploration and geography. 
+
+### Responsiveness
+
+My website is responsive to different layouts depending on the size of the viewport have been included in the CSS media queries. This allows visitors to experience the website as I intended on device types and screen sizes. The breakpoints I am using are from Bootstrap.
+
+![Breakpoints](docs/)
+
 
 
 
