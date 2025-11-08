@@ -2,13 +2,13 @@
 
 :root {
     --deep-earth-brown: #34190D; /* For headings and text*/
-    --sand-beige:#D6CDB9;/* For quiz box background*/
+    --sand-beige: 214, 205, 185;/* For quiz box background*/
     --warm-taupe: #C5B29A;
     --desert-clay: #B4977A; /* For buttons and highlights*/
     --walnut-brown: #604A3A;/* footer background and subheadings*/
     --wrong-answer-red: #ff3333;/* For wrong answers*/
     --right-answer-green: #51bf83; /* For right answers*/
-    --pale-stone: #BEB0A8; /* For body background borders */
+    --pale-stone: #BEB0A8; /* For body background / borders colour */
   }
   
   * {
@@ -16,14 +16,45 @@
     padding: 0;
     border: none;
   }
+  html {
+    font-size: 62.5%;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+  }
+  
 
+  
+  
 
 body{
-    background: var(--pale-stone) url("../images/background-map.jpg") center / cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;justify-content: center;
+    background: var(--pale-stone) url("../images/background-map.png") center / 
+    cover no-repeat fixed;
     font-family: 'Poppins', sans-serif;
 
 }
+
+main {
+    flex: 1 0 auto;
+  }
+
 h1, h2{
     font-family: 'Gloria Hallelujah', cursive;
 }
+.container-quiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(var(--sand-beige), 0.7 );
+    font-size: 1.5 rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 50% 50%;
+    box-shadow: 0 0 1rem 0.5rem;
+    height: 600px;
+    width: 800px;
+
+}
+
 
