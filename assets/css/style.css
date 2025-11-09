@@ -68,6 +68,33 @@ h3{
     color: var(--deep-earth-brown);
     margin-top: 2rem;
 }
+/* Header */
+.site-header{
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between;
+    padding: .75rem 1rem;
+    background-color: rgba(var(--sand-beige), 0.85 );
+    margin: 2rem;
+    border-radius: 35px;
+    box-shadow: 0 0 1rem 0.5rem;
+    width: 80vw;
+    
+}
+  .instructions{ 
+      background-color: var(--desert-clay); 
+      font-family: 'Gloria Hallelujah', cursive; 
+      color: var(--deep-earth-brown); 
+      z-index: 59;
+      font-size: 3rem;
+      font-weight: 500;
+      border-radius: 35px;
+      margin-bottom: 2rem;
+      padding: 2rem;
+
+
+  }
+ 
 /* Utilities*/
 .container-quiz{
     display: flex;
@@ -115,15 +142,37 @@ label {
   
 
 .btn{
-    background-color:  var(--warm-taupe);
+    background-color:var(--warm-taupe);
     border: 2px solid;
     border-color:var(--desert-clay);
     font-size: 2rem;
     border-radius: 1rem;
     padding: 1rem 1rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1.2rem;
     color: var(--deep-earth-brown);
     width: auto;
     gap: 10px;
+}
+
+
+.btn-difficulty{
+    padding: 1rem 2rem;
+    background-color: var(--warm-taupe);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-difficulty.active{
+    background-color: var(--deep-earth-brown);
+    color: var(--warm-taupe);
+    border: none;
+
+}
+
+.btn-difficulty:hover{
+    cursor: pointer;
+    background-color: var(--walnut-brown);
+    color: var(--warm-taupe);
+
 }
 
