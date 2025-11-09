@@ -23,7 +23,32 @@
      <main>
           <div class="container-quiz">
               <h1>Geo Detectives</h1>
-              <div></div>
+              <div id="quiz" class="flex-center flex-column">
+                <h2>Test Your Knowledge of Our Planet!</h2>
+                <form id="start-quiz" class="text-center">
+                    <h3>Please enter your username:</h3>
+                    <label for="username">Enter your username:</label>
+                    <input type="text" name="username" id="username" class="btn" placeholder="" required>
+                    
+                    <h3>Choose your level:</h3>
+                    <div id="difficulty">
+                      <button data-type="easy" class="btn" data-level="easy" type="button">
+                        Easy
+                      </button>
+                      <button data-type="medium" class="btn" data-level="medium" type="button">
+                        Medium
+                      </button>
+                      <button data-type="hard" class="btn" data-level="hard" type="button">
+                        Hard
+                      </button>
+                    </div>
+                    <div class="play">
+                      <button id="btn-start" data-type="start" class="btn" type="submit">
+                        Start Quiz
+                      </button>
+                    </div>
+                  </form>
+              </div>
 
           </div>
 

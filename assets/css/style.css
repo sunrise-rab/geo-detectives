@@ -12,8 +12,8 @@
   }
   
   * {
-    margin: 0;
-    padding: 0;
+   /* margin: 0;
+    padding: 0;*/
     border: none;
   }
   html {
@@ -28,33 +28,102 @@
 
 body{
     display: flex;
-    flex-direction: column;justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--pale-stone) url("../images/background-map.png") center / 
     cover no-repeat fixed;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
 
 }
 
 main {
-    flex: 1 0 auto;
+   /* flex: 1 0 auto;*/
   }
 
-h1, h2{
+h1, h2, h3{
     font-family: 'Gloria Hallelujah', cursive;
 }
+
+h1,
+h2,
+h3{
+    margin-bottom: 1rem;
+}
+h1{
+    font-size: 3.5rem;
+    color: var(--deep-earth-brown);
+    font-weight: 700;
+}
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--walnut-brown);
+}
+h3{
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--deep-earth-brown);
+    margin-top: 2rem;
+}
+/* Utilities*/
 .container-quiz{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: rgba(var(--sand-beige), 0.7 );
+    align-items: center;
+    background-color: rgba(var(--sand-beige), 0.85 );
     font-size: 1.5 rem;
     padding: 2rem;
     margin: 2rem;
-    border-radius: 50% 50%;
+    border-radius: 35px;
     box-shadow: 0 0 1rem 0.5rem;
-    height: 600px;
-    width: 800px;
-
+    width: 80vw;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+#start-quiz {
+    line-height: 2;
+}
+
+/* Buttons, Labels and inputs*/
+
+label {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: var(--deep-earth-brown);
+  }
+  
+
+.btn{
+    background-color:  var(--warm-taupe);
+    border: 2px solid;
+    border-color:var(--desert-clay);
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin: 1rem 0 1rem 0;
+    color: var(--deep-earth-brown);
+    width: auto;
+    gap: 10px;
+}
 
