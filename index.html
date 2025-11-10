@@ -30,7 +30,8 @@
      <!-- Main section-->
      <main>
           <div class="container-quiz">
-              <div id="quiz" class="flex-center flex-column">
+              <!--Choose level start-->
+              <div id="choose-level-area" class="flex-center flex-column">
                 <h2>Test Your Knowledge of Our Planet!</h2>
                 <form id="start-quiz" class="text-center">
                     <h3>Please enter your username:</h3>
@@ -50,12 +51,48 @@
                       </button>
                     </div>
                     <div class="play">
-                      <button id="btn-start" data-type="start" class="btn " type="submit">
+                      <button id="btn-start" data-type="start" class="btn" type="submit">
                         Start Quiz
                       </button>
                     </div>
                   </form>
               </div>
+              <!--Choose level end-->
+              <!--Question start-->
+              <div id="question-area" class="hidden">
+                   <!-- Your Level-->
+                 <div id="your-level">
+                      <h3>You have choosen <span id="selectedLevel">x</span> level</h3>
+                 </div>
+                  <!-- Question progress area-->
+                <div id="progress">
+                     <div id="progress-bar"></div>
+                     <div id="timer">
+                        <i class="fas fa-stopwatch"></i>
+                        <span id="seconds">20 Secondes</span>
+                     </div>
+                     <div id="questions-number">
+                         <p>Question</p>
+                     </div>
+
+                    
+                </div>
+                <div id="question">Question</div>
+                <div id="btn-answers" class="btn-choose-answer">
+                  <button type="button" class="btn">Option 1</button>
+                  <button type="button" class="btn">Option 2</button>
+                  <button type="button" class="btn">Option 3</button>
+                  <button type="button" class="btn">Option 4</button>
+                </div>
+               
+                 <!-- Results Area-->
+                <div id="result">
+                  <i class="fa-solid fa-check"></i>: <span id="score">0</span>
+                  <i class="fa-solid fa-x"></i>: <span id="incorrect">0</span>
+                </div>
+              </div>
+              
+              <!--Questions End -->
 
           </div>
 

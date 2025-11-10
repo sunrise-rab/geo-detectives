@@ -25,3 +25,39 @@ function showInstructions() {
       instructions.style.display = "none";
     }
   }
+
+const APILINK = `https://opentdb.com/api.php`;
+const SCOREBONUS = 1;
+const MAXQUESTIONS = 10;
+
+
+  /**
+   * Retrieve elements from the DOM
+   * Event Listner on the form submission event.
+   * Create Hide start area and display question area function
+   * Username and Level selection process and alert when is either level or username missing
+ */
+ 
+const form = document.querySelector("#start-quiz");
+const questionAreaRef = document.querySelector("#question-area");
+const chooseLevelAreaRef = document.querySelector("#choose-level-area");
+const startButton = document.querySelector("#btn-start");
+const selectedLevel = document.querySelector("#selected-level");
+const usernameRef = document.querySelector("#username");
+
+const displayArea = el => el.classList.remove('hidden');
+const hideArea    = el => el.classList.add('hidden');
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const selectedLevel = document.querySelector(".btn-difficulty.active");
+    const myUsername = usernameRef;
+
+    if (myUsername.value && selectedLevel) {
+      hideArea(chooseLevelAreaRef);
+      displayArea(questionAreaRef);
+      await startGame(selectedLevel.dataset.level);
+    } else {
+      alert("Please enter the required informations.");
+    }
+  });
+
