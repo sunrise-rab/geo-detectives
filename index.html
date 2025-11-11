@@ -19,6 +19,7 @@
         <h1><i class="fa-solid fa-compass"></i> Geo Detectives</h1>
         <button id="howTo" class="btn" onclick="showInstructions()">How to play</button>
     </header>
+    <!-- Instructions section-->
     <div id="howToPlay" class="hidden instructions">
         <ol>
           <li>Enter your name</li>
@@ -26,6 +27,8 @@
           <li>Answer before the timer runs out</li>
         </ol>
       </div>
+      <!-- Load section -->
+  <div id="loader" class="hidden"></div>
 
      <!-- Main section-->
      <main>
@@ -59,30 +62,32 @@
               </div>
               <!--Choose level end-->
               <!--Question start-->
-              <div id="question-area" class="hidden">
+              <div id="question-area" class="hidden flex-center text-center">
                    <!-- Your Level-->
                  <div id="your-level">
-                      <h3>You have choosen <span id="selectedLevel">x</span> level</h3>
+                      <h2>You have choosen <span id="selectedLevel">x</span> level</h2>
                  </div>
                   <!-- Question progress area-->
-                <div id="progress">
-                     <div id="progress-bar"></div>
-                     <div id="timer">
+                <div id="progress" class="row">
+                     
+                    <div id="questions-number" class="column left">
+                        <p>Question</p>
+                     </div>
+                     <div id="progress-bar" class="column middle">progress bar</div>
+                     <div id="timer" class="column right">
                         <i class="fas fa-stopwatch"></i>
                         <span id="seconds">20 Secondes</span>
                      </div>
-                     <div id="questions-number">
-                         <p>Question</p>
-                     </div>
+                     
 
                     
                 </div>
                 <div id="question">Question</div>
                 <div id="btn-answers" class="btn-choose-answer">
-                  <button type="button" class="btn">Option 1</button>
-                  <button type="button" class="btn">Option 2</button>
-                  <button type="button" class="btn">Option 3</button>
-                  <button type="button" class="btn">Option 4</button>
+                  <button type="button" class="btn btn-option">Option 1</button>
+                  <button type="button" class="btn btn-option">Option 2</button>
+                  <button type="button" class="btn btn-option">Option 3</button>
+                  <button type="button" class="btn btn-option">Option 4</button>
                 </div>
                
                  <!-- Results Area-->

@@ -106,8 +106,8 @@ h3{
     margin: 2rem;
     border-radius: 35px;
     box-shadow: 0 0 1rem 0.5rem;
-    width: 80vw;
-    max-width: 80rem;
+    width: auto;
+    /*max-width: 80rem;*/
     margin: 0 auto;
 }
 
@@ -176,3 +176,56 @@ label {
 
 }
 
+.btn-choose-answer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(9rem, 1fr));
+    justify-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .btn-option {
+    min-width: 35vw;
+    padding: 1rem;
+  }
+
+  /* Question area styling*/
+  .row{
+      display: table;
+      width:100%;
+  }
+  .column {
+    float: left;
+  }
+  
+  .left, .right {
+    width: 25%;
+  }
+  
+  .middle {
+    width: 50%;
+  }
+
+  .fa-check {
+    color: var(--right-answer-green);
+  }
+  
+  .fa-x {
+    color: var(--wrong-answer-red);
+  }
+
+  #loader {
+    border: 16px solid var(--deep-earth-brown);
+    border-top: 16px solid var(--pale-stone);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

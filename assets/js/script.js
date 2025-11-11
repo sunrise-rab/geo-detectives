@@ -1,4 +1,8 @@
-
+/**
+ * Hide and show Function.
+ */
+const displayArea = el => el.classList.remove('hidden');
+ const hideArea    = el => el.classList.add('hidden');
 /**
  * Function to keep the clicked button active.
  */
@@ -26,27 +30,43 @@ function showInstructions() {
     }
   }
 
-const APILINK = `https://opentdb.com/api.php`;
-const SCOREBONUS = 1;
-const MAXQUESTIONS = 10;
 
+
+
+/**
+ * Fetches trivia questions from the Open Trivia Database API based on the specified difficulty.
+ * @param {string} difficulty - adjustable setting chosen.
+ * @returns {Promise<Array>} - returns a promise of formatted questions.
+ * @throws {Error} throws an error if does not fetch.
+ */
+ 
+ 
+ const loaderRef = document.querySelector("#loader");
+ const questionAreaRef = document.querySelector("#question-area");
+
+ async function loadQuestion(){
+     const APIUrl = 'https://opentdb.com/api.php';
+     const result = await fetch(`${APIUrl}`);
+     const data = await result.json();
+     console.log(data);
+ }
+ loadQuestion();
 
   /**
    * Retrieve elements from the DOM
    * Event Listner on the form submission event.
-   * Create Hide start area and display question area function
+   * Hide choose Level area and display question area.
    * Username and Level selection process and alert when is either level or username missing
  */
  
 const form = document.querySelector("#start-quiz");
-const questionAreaRef = document.querySelector("#question-area");
+
 const chooseLevelAreaRef = document.querySelector("#choose-level-area");
 const startButton = document.querySelector("#btn-start");
 const selectedLevel = document.querySelector("#selected-level");
 const usernameRef = document.querySelector("#username");
 
-const displayArea = el => el.classList.remove('hidden');
-const hideArea    = el => el.classList.add('hidden');
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const selectedLevel = document.querySelector(".btn-difficulty.active");
@@ -55,7 +75,7 @@ const hideArea    = el => el.classList.add('hidden');
     if (myUsername.value && selectedLevel) {
       hideArea(chooseLevelAreaRef);
       displayArea(questionAreaRef);
-      await startGame(selectedLevel.dataset.level);
+      
     } else {
       alert("Please enter the required informations.");
     }
