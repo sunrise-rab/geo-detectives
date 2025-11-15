@@ -183,6 +183,12 @@ label {
     gap: 2rem;
     margin: 2rem 0;
   }
+
+  .btn-answer {
+    min-width: 35vw;
+    padding: 1rem;
+  }
+
   .btn-answer.correct{
     background-color: var(--right-answer-green);
   }
@@ -190,10 +196,11 @@ label {
   background-color: var(--wrong-answer-red);
 }
 
-  .btn-answer {
-    min-width: 35vw;
-    padding: 1rem;
-  }
+.btn-answer.disable{
+  pointer-events: none;
+}
+
+  
 
   /* Question area styling*/
   .row{
