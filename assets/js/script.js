@@ -143,7 +143,22 @@ function renderQuestion(){
 }
 
 function onAnswerClick(e){
-  const btn = e.currentTarget;
+  const ansChosen = e.target.innerHTML;
+  checkAnswer(ansChosen);
+
+}
+
+function checkAnswer(ansChosen){
+  const currentQuestion = questions[questionNumber - 1]
+  const btnChosen = Array.from (answersEl).find((button) => button.textContent === ansChosen);
+  const applyClass = ansChosen === currentQuestion.correct ? "correct" : "wrong";
+ 
+ if(btnChosen){
+  btnChosen.classList.add(applyClass);
+ }else{
+   alert("No matching Button found for answerS")
+ }
+
 }
 
 
