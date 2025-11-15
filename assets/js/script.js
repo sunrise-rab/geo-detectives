@@ -7,9 +7,22 @@ const chooseLevelAreaRef = document.querySelector("#choose-level-area");
 const startButton = document.querySelector("#btn-start");
 const selectedLevel = document.querySelector("#selected-level");
 const usernameRef = document.querySelector("#username");
+const answersEl = document.querySelectorAll(".btn-answer")
+const questionEl = document.querySelector('#question');
+const scoreEl    = document.querySelector('#score');       // optional (you have it)
+const wrongEl    = document.querySelector('#incorrect');
+
+
+let correctScore = 0;
+let incorrectScore = 0;
+let questionNumber = 10;
+let questions = [];
+let questionIndex = 0;
+let acceptingAnswers = true;
 
 const displayArea = el => el.classList.remove('hidden');
 const hideArea    = el => el.classList.add('hidden');
+const shuffle=(answers) => answers.sort(()=> Math.random() - .5);
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
@@ -37,17 +50,21 @@ function showInstructions() {
 
 /**
  * Fetches trivia questions from the Open Trivia Database API based on the specified difficulty.
+ * Display level of difficulty in the question area.
  * @param {string} difficulty - adjustable setting chosen.
  * @returns {Promise<Array>} - returns a promise of formatted questions.
- * 
  * @throws {Error} throws an error if does not fetch.
  */
  async function loadQuestion(difficulty){
+     hideArea(chooseLevelAreaRef);
+     displayArea(loaderRef);
      const APIUrl = 'https://opentdb.com/api.php';
      const result = await fetch(`${APIUrl}?amount=10&category=22&difficulty=${difficulty}&type=multiple`);
-     if (!result.ok)throw new Error('Failed to fetch questions');
+     if (!result.ok){
+       throw new Error('Failed to fetch questions');
+     }
      const data = await result.json();
-     return data.results;
+     return formatQuestions(data.results);
  }
 
 
@@ -58,13 +75,11 @@ function showInstructions() {
     const myUsername = usernameRef.value.trim();
 
     if (myUsername && level) {
-      hideArea(chooseLevelAreaRef);
+      await startGame(level);  
+      hideArea(loaderRef);
       displayArea(questionAreaRef);
       selectedLevel.textContent = level;
-
-      const questions = loadQuestion(level)
-      console.log(questions)
-      
+     
     } else {
       alert("Please enter the required informations.");
     }
@@ -72,3 +87,63 @@ function showInstructions() {
 
 
   showInstructions()
+
+/**
+* Start the the quiz when the start button is clicked
+* @param {string} level - Fetches quiz questions based on the selected level.
+* @param {Error} Error -handles error if fails to start
+*/
+
+async function startGame(level) {
+  try{
+  questions = await loadQuestion(level)
+  questionNumber = 0;
+  renderQuestion();
+} catch(Error){                                                           
+  console.error(Error);
+  }
+};
+
+/**
+* @param {Array} results - The data from the API
+* @returns {Array} A formatted question object with properties from the API 
+*/
+
+function formatQuestions(results){
+  return results.map(q => {
+     const question = q.question;
+     const correct  = q.correct_answer;
+     const wrongs   = q.incorrect_answers;
+     const answers  = shuffle([correct, ...wrongs]);
+     return {question, correct, answers}
+  });
+};
+
+/**
+* Display the question and answer options.
+* @returns End quiz if the number of question reached 10.
+*Assign each answer to a specific button.
+*/
+
+
+function renderQuestion(){
+  if (questionNumber >= 10){ 
+  return endQuiz();
+  }
+  const currentQuestion = questions[questionNumber]
+  questionEl.textContent = currentQuestion.question;
+  answersEl.forEach((btn, i) =>{
+    btn.innerHTML= currentQuestion.answers[i];
+    btn.addEventListener("click", onAnswerClick);
+    
+  })
+
+  questionNumber++;
+
+}
+
+function onAnswerClick(e){
+  const btn = e.currentTarget;
+}
+
+

@@ -183,8 +183,14 @@ label {
     gap: 2rem;
     margin: 2rem 0;
   }
+  .btn-answer.correct{
+    background-color: var(--right-answer-green);
+  }
+.btn-answer.wrong{
+  background-color: var(--wrong-answer-red);
+}
 
-  .btn-option {
+  .btn-answer {
     min-width: 35vw;
     padding: 1rem;
   }
@@ -215,8 +221,8 @@ label {
   }
 
   #loader {
-    border: 16px solid var(--deep-earth-brown);
-    border-top: 16px solid var(--pale-stone);
+    border: 20px solid var(--deep-earth-brown);
+    border-top: 20px solid var(--pale-stone);
     border-radius: 50%;
     width: 120px;
     height: 120px;
