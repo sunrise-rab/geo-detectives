@@ -9,8 +9,10 @@ const selectedLevel = document.querySelector("#selected-level");
 const usernameRef = document.querySelector("#username");
 const answersEl = document.querySelectorAll(".btn-answer")
 const questionEl = document.querySelector('#question');
-const scoreEl    = document.querySelector('#score');       // optional (you have it)
+const scoreEl    = document.querySelector('#score');       
 const wrongEl    = document.querySelector('#incorrect');
+const secondsEl = document.querySelector("#seconds");
+const questionProgress = document.querySelector("#questions-number");
 
 
 let correctScore = 0;
@@ -18,7 +20,9 @@ let incorrectScore = 0;
 let questionNumber = 10;
 let questions = [];
 let questionIndex = 0;
+const maxQuestions = 10;
 let acceptingAnswers = true;
+let timeCounter;
 
 const displayArea = el => el.classList.remove('hidden');
 const hideArea    = el => el.classList.add('hidden');
@@ -119,6 +123,28 @@ function formatQuestions(results){
   });
 };
 
+
+
+
+/**
+ * Sets timer for the quiz and counts down from 20 secs
+ */
+
+ const startTimer = () => {
+  clearInterval(timeCounter);
+  let sec = 20;
+  const timerElement = secondsEl;
+  timeCounter = setInterval(() => {
+    timerElement.textContent = sec;
+    sec--;
+    if (sec <= 0) {
+      clearInterval(timeCounter);
+      renderQuestion();
+    }
+  }, 1000);
+};
+
+
 /**
 * Display the question and answer options.
 * @returns End quiz if the number of question reached 10.
@@ -130,6 +156,7 @@ function renderQuestion(){
   if (questionNumber >= 10){ 
   return endQuiz();
   }
+  clearStatusClass(answersEl);
   const currentQuestion = questions[questionNumber]
   questionEl.textContent = currentQuestion.question;
   answersEl.forEach((btn, i) =>{
@@ -137,28 +164,49 @@ function renderQuestion(){
     btn.addEventListener("click", onAnswerClick);
     
   })
-
+  questionProgress.innerHTML=`Question ${questionNumber + 1} out of ${maxQuestions}`
   questionNumber++;
-
+  startTimer();
 }
+
+
+/** 
+ * @param {string} e retrieve the selected answer. 
+ */
 
 function onAnswerClick(e){
   const ansChosen = e.target.innerHTML;
   checkAnswer(ansChosen);
-
+  
 }
+
+/**
+ * find the button corresponding to the choosen answer and apply correct or wrong style to it.
+ * @param {string} ansChosen the choosen answer that the user selected.
+ */
 
 function checkAnswer(ansChosen){
   const currentQuestion = questions[questionNumber - 1]
   const btnChosen = Array.from (answersEl).find((button) => button.textContent === ansChosen);
   const applyClass = ansChosen === currentQuestion.correct ? "correct" : "wrong";
- 
- if(btnChosen){
   btnChosen.classList.add(applyClass);
- }else{
-   alert("No matching Button found for answerS")
- }
-
+  disableAnswerButtons();
+  
 }
+
+const clearStatusClass = (button) => {
+  button.forEach((btn) => {
+    btn.classList.remove("correct", "wrong");
+    btn.classList.remove("disable");
+  });
+};
+
+const disableAnswerButtons = () => {
+  answersEl.forEach((btn) => {
+    btn.classList.add("disable");
+    btn.disable = true;
+  });
+};
+
 
 
