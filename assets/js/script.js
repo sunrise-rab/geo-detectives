@@ -16,7 +16,8 @@ const questionProgress = document.querySelector("#questions-number");
 
 
 let correctScore = 0;
-let incorrectScore = 0;
+let wrongScore = 0;
+let score = 1;
 let questionNumber = 10;
 let questions = [];
 let questionIndex = 0;
@@ -28,6 +29,7 @@ const displayArea = el => el.classList.remove('hidden');
 const hideArea    = el => el.classList.add('hidden');
 const shuffle=(answers) => answers.sort(()=> Math.random() - .5);
 
+
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     // remove 'active' from all
@@ -36,6 +38,7 @@ buttons.forEach(button => {
     button.classList.add('active');
   });
 });
+
 
 
 /**
@@ -49,6 +52,15 @@ function showInstructions() {
     }
   }
 
+  const incrementCorrectScore = (num) => {
+    correctScore += num;
+    scoreEl.textContent = correctScore; 
+  }
+  
+  const incrementWrongScore = (num) => {
+    wrongScore += num;
+    wrongEl.textContent = wrongScore; }
+  
 
 
 
@@ -170,6 +182,7 @@ function renderQuestion(){
 }
 
 
+
 /** 
  * @param {string} e retrieve the selected answer. 
  */
@@ -191,9 +204,30 @@ function checkAnswer(ansChosen){
   const applyClass = ansChosen === currentQuestion.correct ? "correct" : "wrong";
   btnChosen.classList.add(applyClass);
   disableAnswerButtons();
+ 
+ /*const TimeIsUP (()=>{
+    clearInterval(timeCounter);
+    btnChosen.classList.remove(applyClass);
+    renderQuestion();
+  }, 1000);*/
+
+  setTimeout(() => {
+    clearInterval(timeCounter);
+    renderQuestion();
+  }, 1000);
+   
+  if(ansChosen){
+    if(ansChosen===currentQuestion.correct){
+       incrementCorrectScore(score);
+    }else{
+        incrementWrongScore(score);
+    }
+  }
+  
   
 }
 
+const showCorrectAnswer = () =>{}
 const clearStatusClass = (button) => {
   button.forEach((btn) => {
     btn.classList.remove("correct", "wrong");
@@ -207,6 +241,9 @@ const disableAnswerButtons = () => {
     btn.disable = true;
   });
 };
+ 
+
+
 
 
 

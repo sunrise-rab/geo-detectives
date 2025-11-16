@@ -24,6 +24,7 @@
         <ol>
           <li>Enter your name</li>
           <li>Pick a level (Easy / Medium / Hard)</li>
+          <li>Press Start quiz</li>
           <li>Answer before the timer runs out</li>
         </ol>
       </div>
@@ -70,19 +71,19 @@
                   <!-- Question progress area-->
                 <div id="progress" class="row">
                      
-                    <div  class="column left">
-                        <p id="questions-number"></p>
-                     </div>
-                     <div id="progress-bar" class="column middle">progress bar</div>
-                     <div id="timer" class="column right">
+                    <div  class="left">
+                        <p id="questions-number" class="question-number"></p>
+                    </div>
+                     
+                     <div id="timer" class=" right">
                         <i class="fas fa-stopwatch"></i>
-                        <span id="seconds"></span>
+                        <span id="seconds" ></span>
                      </div>
                      
 
                     
                 </div>
-                <div id="question"></div>
+                <div id="question" class="questions"></div>
                 <div id="btn-answers" class="btn-choose-answer">
                   <button type="button" class="btn btn-answer"></button>
                   <button type="button" class="btn btn-answer"></button>
@@ -93,8 +94,8 @@
                
                  <!-- Results Area-->
                 <div id="result">
-                  <i class="fa-solid fa-check"></i>: <span id="score">0</span>
-                  <i class="fa-solid fa-x"></i>: <span id="incorrect">0</span>
+                  <i class="fa-solid fa-check"></i> <span id="score">0</span>
+                  <i class="fa-solid fa-x"></i> <span id="incorrect">0</span>
                 </div>
               </div>
               

@@ -57,13 +57,13 @@ h1{
     font-weight: 700;
 }
 h2{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 2rem;
     color: var(--walnut-brown);
 }
 h3{
-    font-size: 1.9rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: var(--deep-earth-brown);
     margin-top: 2rem;
@@ -203,21 +203,47 @@ label {
   
 
   /* Question area styling*/
+
+  .questions{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 2rem;
+    color:var(--deep-earth-brown);
+    
+  }
+  .question-number{
+    font-size: 1.5rem;
+    color:var(--deep-earth-brown);
+  }
+
+
   .row{
       display: table;
       width:100%;
+      text-align: center;
+    
   }
   .column {
     float: left;
   }
   
-  .left, .right {
-    width: 25%;
+  .left {
+    float: left;
+    margin: 2rem;
+    text-align: left;
+  }
+  .right{
+    background-color: var(--walnut-brown);
+    color: var(--warm-taupe);
+    border-radius: 999px;
+    font-size: 1.5rem;
+    float: right;
+    margin: 2rem;
+    padding: .5rem;
+    width: 85px;
+
   }
   
-  .middle {
-    width: 50%;
-  }
 
   .fa-check {
     color: var(--right-answer-green);
@@ -227,6 +253,8 @@ label {
     color: var(--wrong-answer-red);
   }
 
+
+
   #loader {
     border: 20px solid var(--deep-earth-brown);
     border-top: 20px solid var(--pale-stone);
@@ -235,6 +263,24 @@ label {
     height: 120px;
     animation: spin 2s linear infinite;
   }
+  #seconds{
+    font-weight: 600;
+  }
+
+  #result {
+    margin-top: 1rem;
+    justify-content: center;
+    font-size: 1.5rem;
+  
+  }
+  #result span,
+  #result i {
+  vertical-align: middle;
+  
+}
+#result i{
+  padding-left: 2rem;
+}
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
