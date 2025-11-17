@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll('.btn-difficulty');
 const loaderRef = document.querySelector("#loader");
 const questionAreaRef = document.querySelector("#question-area");
 const instructions = document.querySelector("#howToPlay");
+const howToBtn = document.querySelector('#howTo')
 const form = document.querySelector("#start-quiz");
 const chooseLevelAreaRef = document.querySelector("#choose-level-area");
 const startButton = document.querySelector("#btn-start");
@@ -13,6 +14,9 @@ const scoreEl    = document.querySelector('#score');
 const wrongEl    = document.querySelector('#incorrect');
 const secondsEl = document.querySelector("#seconds");
 const questionProgress = document.querySelector("#questions-number");
+const finalAreaRef    = document.querySelector('#final-area');
+const finalSummaryEl  = document.querySelector('#final-summary');
+const playAgainBtn    = document.querySelector('#play-again');
 
 
 let correctScore = 0;
@@ -44,14 +48,14 @@ buttons.forEach(button => {
 /**
  * Shows or hides the instruction box
  */
-function showInstructions() {
-    if (instructions.style.display === "none") {
-      instructions.style.display = "block";
-    } else {
-      instructions.style.display = "none";
-    }
-  }
+  howToBtn.addEventListener('click', ()=>{
+    instructions.classList.toggle('hidden');
+  });
 
+  /**
+   * Increment correct and wrong scores.
+   * @param {number} num 
+   */
   const incrementCorrectScore = (num) => {
     correctScore += num;
     scoreEl.textContent = correctScore; 
@@ -101,9 +105,6 @@ function showInstructions() {
     }
   });
 
-
-  showInstructions()
-
 /**
 * Start the the quiz when the start button is clicked
 * @param {string} level - Fetches quiz questions based on the selected level.
@@ -114,7 +115,12 @@ async function startGame(level) {
   try{
   questions = await loadQuestion(level)
   questionNumber = 0;
-  renderQuestion();
+
+  if(questionNumber >= questions.length){
+    endQuiz
+  }else{
+    renderQuestion()
+  }
 } catch(Error){                                                           
   console.error(Error);
   }
@@ -127,13 +133,24 @@ async function startGame(level) {
 
 function formatQuestions(results){
   return results.map(q => {
-     const question = q.question;
-     const correct  = q.correct_answer;
-     const wrongs   = q.incorrect_answers;
+     const question = decodeHTML(q.question);
+     const correct  = decodeHTML(q.correct_answer);
+     const wrongs   = q.incorrect_answers.map(decodeHTML);
      const answers  = shuffle([correct, ...wrongs]);
      return {question, correct, answers}
   });
 };
+
+/**
+ * formmate any special characters in the questions and answers and return a string
+ * @param {string} str 
+ * @returns 
+ */
+function decodeHTML(str) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = str;
+  return txt.value;
+}
 
 
 
@@ -205,11 +222,6 @@ function checkAnswer(ansChosen){
   btnChosen.classList.add(applyClass);
   disableAnswerButtons();
  
- /*const TimeIsUP (()=>{
-    clearInterval(timeCounter);
-    btnChosen.classList.remove(applyClass);
-    renderQuestion();
-  }, 1000);*/
 
   setTimeout(() => {
     clearInterval(timeCounter);
@@ -241,7 +253,55 @@ const disableAnswerButtons = () => {
     btn.disable = true;
   });
 };
- 
+
+/**
+ * Clear scores and username and remove active class from difficulty button.
+ * Show the username and level again
+ * 
+ */
+
+playAgainBtn.addEventListener('click', () => {
+  correctScore = 0;
+  wrongScore = 0;
+  questionNumber= 0;
+  scoreEl.textContent = '0';
+  wrongEl.textContent = '0';
+  usernameRef.value =''
+  buttons.forEach(btn => btn.classList.remove('active'))
+  hideArea(finalAreaRef);
+  displayArea(chooseLevelAreaRef);
+});
+
+/**
+ * Stop timer if it is still running
+ * hide question area and display Final score area 
+ * Friendly summary message
+ */
+
+function endQuiz() {
+  if (timeCounter) {
+    clearInterval(timeCounter);
+  }
+
+  hideArea(questionAreaRef);
+  displayArea(finalAreaRef);
+
+  const totalQuestions = questions.length;
+  const correct = correctScore;
+  const percent = Math.round((correct / totalQuestions) * 100);
+  if (percent === 100) {
+    finalSummaryEl.textContent = `Perfect score! You got ${correct} out of ${totalQuestions}. 🌟`;
+  } else if (percent >= 70) {
+    finalSummaryEl.textContent = `Great job! You scored ${correct} out of ${totalQuestions}.`;
+  } else if (percent >= 40) {
+    finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}. Keep practising!`;
+  } else {
+    finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}. Don’t worry – even great detectives need training.`;
+  }
+}
+
+
+
 
 
 

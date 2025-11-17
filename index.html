@@ -17,7 +17,7 @@
     <!-- Header section-->
     <header class="site-header">
         <h1><i class="fa-solid fa-compass"></i> Geo Detectives</h1>
-        <button id="howTo" class="btn" onclick="showInstructions()">How to play</button>
+        <button id="howTo" class="btn">How to play</button>
     </header>
     <!-- Instructions section-->
     <div id="howToPlay" class="hidden instructions">
@@ -35,7 +35,7 @@
      <main>
           <div class="container-quiz">
               <!--Choose level start-->
-              <div id="choose-level-area" class="flex-center flex-column">
+              <div id="choose-level-area" class="text-center flex-column">
                 <h2>Test Your Knowledge of Our Planet!</h2>
                 <form id="start-quiz" class="text-center">
                     <h3>Please enter your username:</h3>
@@ -79,8 +79,6 @@
                         <i class="fas fa-stopwatch"></i>
                         <span id="seconds" ></span>
                      </div>
-                     
-
                     
                 </div>
                 <div id="question" class="questions"></div>
@@ -100,10 +98,23 @@
               </div>
               
               <!--Questions End -->
+              <!-- Final score results area -->
+              <div id="final-area" class="hidden text-center">
+                <h2 id="final-heading">Well done, Detective!</h2>
+                <p id="final-summary"></p>
+              
+                <button id="play-again" class="btn">Play again</button>
+              </div>
+              <!-- End of final score results area-->
 
           </div>
 
      </main>
+
+     <!-- Footer-->
+     <footer>
+       
+     </footer>
 
 
     <!-- Font awsome kit-->

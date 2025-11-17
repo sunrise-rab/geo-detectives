@@ -106,8 +106,7 @@ h3{
     margin: 2rem;
     border-radius: 35px;
     box-shadow: 0 0 1rem 0.5rem;
-    width: auto;
-    /*max-width: 80rem;*/
+    max-width: 92rem;
     margin: 0 auto;
 }
 
@@ -153,7 +152,25 @@ label {
     width: auto;
     gap: 10px;
 }
+#howTo.btn{
+    background-color:var(--deep-earth-brown);
+    border:none;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin: 1.2rem;
+    color: var(--warm-taupe);
+    width: 135px;
 
+}
+
+#howTo.btn:hover{
+    cursor: pointer;
+    background-color: var(--warm-taupe);
+    color: var(--deep-earth-brown);
+    border: 2px solid;
+    border-color:var(--desert-clay);
+}
 
 .btn-difficulty{
     padding: 1rem 2rem;
@@ -169,12 +186,15 @@ label {
 
 }
 
-.btn-difficulty:hover{
+.btn-difficulty:hover,
+#btn-start.btn:hover,
+#play-again.btn:hover{
     cursor: pointer;
     background-color: var(--walnut-brown);
     color: var(--warm-taupe);
 
 }
+
 
 .btn-choose-answer {
     display: grid;
@@ -200,6 +220,7 @@ label {
   pointer-events: none;
 }
 
+
   
 
   /* Question area styling*/
@@ -215,7 +236,6 @@ label {
     font-size: 1.5rem;
     color:var(--deep-earth-brown);
   }
-
 
   .row{
       display: table;
@@ -286,5 +306,16 @@ label {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+#final-area p{
+  font-weight: 600;
+  color: var(--deep-earth-brown);
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+
+}
+
+
   
   
