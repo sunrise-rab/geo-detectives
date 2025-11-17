@@ -17,6 +17,8 @@ const questionProgress = document.querySelector("#questions-number");
 const finalAreaRef    = document.querySelector('#final-area');
 const finalSummaryEl  = document.querySelector('#final-summary');
 const playAgainBtn    = document.querySelector('#play-again');
+const ratingRef = document.querySelector("#rating");
+const stars = document.querySelectorAll("#stars span");
 
 
 let correctScore = 0;
@@ -270,6 +272,14 @@ playAgainBtn.addEventListener('click', () => {
   buttons.forEach(btn => btn.classList.remove('active'))
   hideArea(finalAreaRef);
   displayArea(chooseLevelAreaRef);
+  hideArea(ratingRef)
+});
+
+stars.forEach(star => {
+  star.addEventListener("click", () => {
+    const rating = star.dataset.value;
+    alert(`Thank you! You rated this quiz ${rating} ⭐`);
+  });
 });
 
 /**
@@ -285,6 +295,7 @@ function endQuiz() {
 
   hideArea(questionAreaRef);
   displayArea(finalAreaRef);
+  displayArea(ratingRef)
 
   const totalQuestions = questions.length;
   const correct = correctScore;
@@ -299,6 +310,14 @@ function endQuiz() {
     finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}. Don’t worry – even great detectives need training.`;
   }
 }
+
+
+
+/*document.getElementById("rateQuizBtn").addEventListener("click", () => {
+  popup.classList.remove("hidden");
+});*/
+
+
 
 
 

@@ -106,7 +106,7 @@ h3{
     margin: 2rem;
     border-radius: 35px;
     box-shadow: 0 0 1rem 0.5rem;
-    max-width: 92rem;
+    max-width: 110rem;
     margin: 0 auto;
 }
 
@@ -316,6 +316,30 @@ label {
 
 }
 
+.rating-box {
+  background-color: var(--deep-earth-brown);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  margin: 1rem auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.rating-box p{
+  color: var(--warm-taupe);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#stars span {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+#stars span:hover {
+  transform: scale(1.2);
+}
 
   
   
