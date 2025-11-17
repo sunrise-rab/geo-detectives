@@ -301,13 +301,13 @@ function endQuiz() {
   const correct = correctScore;
   const percent = Math.round((correct / totalQuestions) * 100);
   if (percent === 100) {
-    finalSummaryEl.textContent = `Perfect score! You got ${correct} out of ${totalQuestions}. 🌟`;
-  } else if (percent >= 70) {
+    finalSummaryEl.textContent = `Perfect score! You got ${correct} out of ${totalQuestions}.`;
+  } else if (percent >= 60) {
     finalSummaryEl.textContent = `Great job! You scored ${correct} out of ${totalQuestions}.`;
   } else if (percent >= 40) {
     finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}. Keep practising!`;
   } else {
-    finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}. Don’t worry – even great detectives need training.`;
+    finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}.Don’t worry – even great detectives need training.`;
   }
 }
 

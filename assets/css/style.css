@@ -342,4 +342,21 @@ label {
 }
 
   
-  
+  @media screen and (max-width:600px) {
+    .site-header{
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .site-header h1{
+      text-align: center;
+    }
+    .btn-choose-answer {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    
+  }
+}
