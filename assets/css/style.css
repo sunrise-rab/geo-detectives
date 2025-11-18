@@ -1,313 +1,344 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fredoka:wght@300..700&family=Gloria+Hallelujah&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --deep-earth-brown: #34190D; /* For headings and text*/
-    --sand-beige: 214, 205, 185;/* For quiz box background*/
-    --warm-taupe: #C5B29A;
-    --desert-clay: #B4977A; /* For buttons and highlights*/
-    --walnut-brown: #604A3A;/* footer background and subheadings*/
-    --wrong-answer-red: #ff3333;/* For wrong answers*/
-    --right-answer-green: #51bf83; /* For right answers*/
-    --pale-stone: #BEB0A8; /* For body background / borders colour */
-  }
-  
-  * {
-   /* margin: 0;
-    padding: 0;*/
-    border: none;
-  }
-  html {
-    font-size: 62.5%;
-    scroll-padding-top: 8rem;
-    scroll-behavior: smooth;
-  }
-  
+  --deep-earth-brown: #34190D;
+  /* For headings and text*/
+  --sand-beige: 214, 205, 185;
+  /* For quiz box background*/
+  --warm-taupe: #C5B29A;
+  --desert-clay: #B4977A;
+  /* For buttons and highlights*/
+  --walnut-brown: #604A3A;
+  /* footer background and subheadings*/
+  --wrong-answer-red: #ff3333;
+  /* For wrong answers*/
+  --right-answer-green: #51bf83;
+  /* For right answers*/
+  --pale-stone: #BEB0A8;
+  /* For body background / borders colour */
+}
 
-  
-  
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--pale-stone) url("../images/background-map.png") center / 
-    cover no-repeat fixed;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.5;
+html {
+  font-size: 62.5%;
+  scroll-padding-top: 8rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: var(--pale-stone) url("../images/background-map.png") center / cover no-repeat fixed;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
 
 }
 
 main {
-   /* flex: 1 0 auto;*/
-  }
-
-h1, h2, h3{
-    font-family: 'Gloria Hallelujah', cursive;
+   flex: 1 0 auto;
 }
 
 h1,
 h2,
-h3{
-    margin-bottom: 1rem;
+h3 {
+  font-family: 'Gloria Hallelujah', cursive;
 }
-h1{
-    font-size: 3.5rem;
-    color: var(--deep-earth-brown);
-    font-weight: 700;
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
 }
-h2{
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--walnut-brown);
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--deep-earth-brown);
+  font-weight: 700;
 }
-h3{
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: var(--deep-earth-brown);
-    margin-top: 2rem;
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--walnut-brown);
 }
+
+h3 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--deep-earth-brown);
+  margin-top: 2rem;
+}
+
 /* Header */
-.site-header{
-    display:flex; 
-    align-items:center; 
-    justify-content:space-between;
-    padding: .75rem 1rem;
-    background-color: rgba(var(--sand-beige), 0.85 );
-    margin: 2rem;
-    border-radius: 35px;
-    box-shadow: 0 0 1rem 0.5rem;
-    width: 80vw;
-    
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  background-color: rgba(var(--sand-beige), 0.85);
+  margin: 2rem;
+  border-radius: 35px;
+  box-shadow: 0 0 1rem 0.5rem;
+  width: 80vw;
+
 }
-  .instructions{ 
-      background-color: var(--desert-clay); 
-      font-family: 'Gloria Hallelujah', cursive; 
-      color: var(--deep-earth-brown); 
-      z-index: 59;
-      font-size: 3rem;
-      font-weight: 500;
-      border-radius: 35px;
-      margin-bottom: 2rem;
-      padding: 2rem;
 
+.instructions {
+  background-color: var(--desert-clay);
+  font-family: 'Gloria Hallelujah', cursive;
+  color: var(--deep-earth-brown);
+  z-index: 59;
+  font-size: 3rem;
+  font-weight: 500;
+  border-radius: 35px;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
 
-  }
- 
 /* Utilities*/
-.container-quiz{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(var(--sand-beige), 0.85 );
-    font-size: 1.5rem;
-    padding: 2rem;
-    margin: 2rem;
-    border-radius: 35px;
-    box-shadow: 0 0 1rem 0.5rem;
-    max-width: 120rem;
-    margin: 0 auto;
+.container-quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(var(--sand-beige), 0.85);
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 35px;
+  box-shadow: 0 0 1rem 0.5rem;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
-.flex-column{
-    display: flex;
-    flex-direction: column;
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
-.flex-center{
-    justify-content: center;
-    align-items: center;
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
 }
-.justify-center{
-    justify-content: center;
+
+.justify-center {
+  justify-content: center;
 }
-.text-center{
-    text-align: center;
+
+.text-center {
+  text-align: center;
 }
-.hidden{
-    display: none;
+
+.hidden {
+  display: none;
 }
+
 #start-quiz {
-    line-height: 2;
+  line-height: 2;
 }
 
 /* Buttons, Labels and inputs*/
 
 label {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-    color: var(--deep-earth-brown);
-  }
-  
-
-.btn{
-    background-color:var(--warm-taupe);
-    border: 2px solid;
-    border-color:var(--desert-clay);
-    font-size: 2rem;
-    border-radius: 1rem;
-    padding: 1rem 1rem;
-    margin: 1.2rem;
-    color: var(--deep-earth-brown);
-    width: auto;
-    gap: 10px;
-}
-#howTo.btn{
-    background-color:var(--deep-earth-brown);
-    border:none;
-    font-size: 2rem;
-    border-radius: 1rem;
-    padding: 1rem 1rem;
-    margin: 1.2rem;
-    color: var(--warm-taupe);
-    width: 135px;
-
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: var(--deep-earth-brown);
 }
 
-#howTo.btn:hover{
-    cursor: pointer;
-    background-color: var(--warm-taupe);
-    color: var(--deep-earth-brown);
-    border: 2px solid;
-    border-color:var(--desert-clay);
+
+.btn {
+  background-color: var(--warm-taupe);
+  border: 2px solid;
+  border-color: var(--desert-clay);
+  font-size: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  margin: 1.2rem;
+  color: var(--deep-earth-brown);
+  width: auto;
+  gap: 10px;
 }
 
-.btn-difficulty{
-    padding: 1rem 2rem;
-    background-color: var(--warm-taupe);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
+#howTo.btn {
+  background-color: var(--deep-earth-brown);
+  border: none;
+  font-size: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  margin: 1.2rem;
+  color: var(--warm-taupe);
+  width: 135px;
+
 }
-.btn-difficulty.active{
-    background-color: var(--deep-earth-brown);
-    color: var(--warm-taupe);
-    border: none;
+
+#howTo.btn:hover {
+  cursor: pointer;
+  background-color: var(--warm-taupe);
+  color: var(--deep-earth-brown);
+  border: 2px solid;
+  border-color: var(--desert-clay);
+}
+
+.btn-difficulty {
+  padding: 1rem 2rem;
+  background-color: var(--warm-taupe);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-difficulty.active {
+  background-color: var(--deep-earth-brown);
+  color: var(--warm-taupe);
+  border: none;
 
 }
 
 .btn-difficulty:hover,
 #btn-start.btn:hover,
-#play-again.btn:hover{
-    cursor: pointer;
-    background-color: var(--walnut-brown);
-    color: var(--warm-taupe);
+#play-again.btn:hover {
+  cursor: pointer;
+  background-color: var(--walnut-brown);
+  color: var(--warm-taupe);
 
+}
+
+#btn-start{
+  background-color: var(--deep-earth-brown);
+  color: var(--pale-stone);
+  width: 19rem;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 
 .btn-choose-answer {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(9rem, 1fr));
-    justify-items: center;
-    gap: 2rem;
-    margin: 2rem 0;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, minmax(9rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
 
-  .btn-answer {
-    min-width: 35vw;
-    padding: 1rem;
-  }
+.btn-answer {
+  min-width: 30vw;
+  padding: 1rem;
+}
 
-  .btn-answer.correct{
-    background-color: var(--right-answer-green);
-  }
-.btn-answer.wrong{
+.btn-answer.correct {
+  background-color: var(--right-answer-green);
+}
+
+.btn-answer.wrong {
   background-color: var(--wrong-answer-red);
 }
 
-.btn-answer.disable{
+.btn-answer.disable {
   pointer-events: none;
 }
 
+/* Question area styling*/
 
-  
+.questions {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 2rem;
+  color: var(--deep-earth-brown);
 
-  /* Question area styling*/
-
-  .questions{
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin: 2rem;
-    color:var(--deep-earth-brown);
-    
-  }
-  .question-number{
-    font-size: 1.5rem;
-    color:var(--deep-earth-brown);
-  }
-
-  .row{
-      display: table;
-      width:100%;
-      text-align: center;
-    
-  }
-  .column {
-    float: left;
-  }
-  
-  .left {
-    float: left;
-    margin: 2rem;
-    text-align: left;
-  }
-  .right{
-    background-color: var(--walnut-brown);
-    color: var(--warm-taupe);
-    border-radius: 999px;
-    font-size: 1.5rem;
-    float: right;
-    margin: 2rem;
-    padding: .5rem;
-    width: 85px;
-
-  }
-  
-
-  .fa-check {
-    color: var(--right-answer-green);
-  }
-  
-  .fa-x {
-    color: var(--wrong-answer-red);
-  }
-
-
-
-  #loader {
-    border: 20px solid var(--deep-earth-brown);
-    border-top: 20px solid var(--pale-stone);
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-  }
-  #seconds{
-    font-weight: 600;
-  }
-
-  #result {
-    margin-top: 1rem;
-    justify-content: center;
-    font-size: 1.5rem;
-  
-  }
-  #result span,
-  #result i {
-  vertical-align: middle;
-  
 }
-#result i{
+
+.question-number {
+  font-size: 1.5rem;
+  color: var(--deep-earth-brown);
+}
+
+.row {
+  display: table;
+  width: 100%;
+  text-align: center;
+
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  float: left;
+  margin: 2rem;
+  text-align: left;
+}
+
+.right {
+  background-color: var(--walnut-brown);
+  color: var(--warm-taupe);
+  border-radius: 999px;
+  font-size: 1.5rem;
+  float: right;
+  margin: 2rem;
+  padding: .5rem;
+  width: 85px;
+
+}
+
+.fa-check {
+  color: var(--right-answer-green);
+}
+
+.fa-x {
+  color: var(--wrong-answer-red);
+}
+
+#loader {
+  border: 20px solid var(--deep-earth-brown);
+  border-top: 20px solid var(--pale-stone);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+#seconds {
+  font-weight: 600;
+}
+
+#result {
+  margin-top: 1rem;
+  justify-content: center;
+  font-size: 1.5rem;
+
+}
+
+#result span,
+#result i {
+  vertical-align: middle;
+
+}
+
+#result i {
   padding-left: 2rem;
 }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
 
-#final-area p{
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#final-area p {
   font-weight: 600;
   color: var(--deep-earth-brown);
   text-align: center;
@@ -323,15 +354,16 @@ label {
   width: 300px;
   text-align: center;
   margin: 1rem auto;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-.rating-box p{
+
+.rating-box p {
   color: var(--warm-taupe);
   font-size: 1rem;
   font-weight: bold;
 }
 
-#stars span {
+#stars{
   font-size: 2rem;
   cursor: pointer;
   padding: 0 0.2rem;
@@ -341,22 +373,24 @@ label {
   transform: scale(1.2);
 }
 
-  
-  @media screen and (max-width:600px) {
-    .site-header{
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .site-header h1{
-      text-align: center;
-    }
-    .btn-choose-answer {
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    
+
+@media screen and (max-width:600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-header h1 {
+    text-align: center;
+  }
+
+  .btn-choose-answer {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+
   }
 }

@@ -1,140 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Geo Detectives is a fun geography quiz for kids to explore the world, learn countries, capitals and landscapes through interactive questions.">
-    <meta name="keywords" content="geography quiz, kids quiz, learning game, education, world map quiz, capitals quiz">
-    <meta name="author" content="Rabia Erraji">
 
-    <!--favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    
-    <!--External Styles-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Geo Detectives</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Geo Detectives is a fun geography quiz for kids to explore the world, learn countries, capitals and landscapes through interactive questions.">
+  <meta name="keywords" content="geography quiz, kids quiz, learning game, education, world map quiz, capitals quiz">
+  <meta name="author" content="Rabia Erraji">
+
+  <!--favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+  <!--External Styles-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Geo Detectives</title>
 </head>
+
 <body>
-    <!-- Header section-->
-    <header class="site-header">
-        <h1><i class="fa-solid fa-compass"></i> Geo Detectives</h1>
-        <button id="howTo" class="btn">How to play</button>
-    </header>
-    <!-- Instructions section-->
-    <div id="howToPlay" class="hidden instructions">
-        <ol>
-          <li>Enter your name</li>
-          <li>Pick a level (Easy / Medium / Hard)</li>
-          <li>Press Start quiz</li>
-          <li>Answer before the timer runs out</li>
-        </ol>
-      </div>
-      <!-- Load section -->
+  <!-- Header section-->
+  <header class="site-header">
+    <h1><i class="fa-solid fa-compass"></i> Geo Detectives</h1>
+    <button id="howTo" class="btn">How to play</button>
+  </header>
+  <!-- Instructions section-->
+  <div id="howToPlay" class="hidden instructions">
+    <ol>
+      <li>Enter your name</li>
+      <li>Pick a level (Easy / Medium / Hard)</li>
+      <li>Press Start quiz</li>
+      <li>Answer before the timer runs out</li>
+    </ol>
+  </div>
+  <!-- Load section -->
   <div id="loader" class="hidden"></div>
 
-     <!-- Main section-->
-     <main>
-          <div class="container-quiz text-center">
-              <!--Choose level start-->
-              <div id="choose-level-area" class="text-center flex-column">
-                <h2>Test Your Knowledge of Our Planet!</h2>
-                <form id="start-quiz" class="text-center">
-                    <h3>Please enter your username:</h3>
-                    <label for="username">Enter your username:</label>
-                    <input type="text" name="username" id="username" class="btn" placeholder="" required>
-                    
-                    <h3>Choose your level:</h3>
-                    <div id="difficulty">
-                      <button data-type="easy" class="btn btn-difficulty" data-level="easy" type="button">
-                        Easy
-                      </button>
-                      <button data-type="medium" class="btn btn-difficulty" data-level="medium" type="button">
-                        Medium
-                      </button>
-                      <button data-type="hard" class="btn btn-difficulty" data-level="hard" type="button">
-                        Hard
-                      </button>
-                    </div>
-                    <div class="play">
-                      <button id="btn-start" data-type="start" class="btn" type="submit">
-                        Start Quiz
-                      </button>
-                    </div>
-                  </form>
-              </div>
-              <!--Choose level end-->
-              <!--Question start-->
-              <div id="question-area" class="hidden flex-center text-center">
-                   <!-- Your Level-->
-                 <div id="your-level">
-                      <h2>You have choosen <span id="selected-level">x</span> level</h2>
-                 </div>
-                  <!-- Question progress area-->
-                <div id="progress" class="row">
-                     
-                    <div  class="left">
-                        <p id="questions-number" class="question-number"></p>
-                    </div>
-                     
-                     <div id="timer" class=" right">
-                        <i class="fas fa-stopwatch"></i>
-                        <span id="seconds" ></span>
-                     </div>
-                    
-                </div>
-                <div id="question" class="questions"></div>
-                <div id="btn-answers" class="btn-choose-answer">
-                  <button type="button" class="btn btn-answer">Option1</button>
-                  <button type="button" class="btn btn-answer">Option2</button>
-                  <button type="button" class="btn btn-answer">Option3</button>
-                  <button type="button" class="btn btn-answer">Option4</button>
-                  
-                </div>
-               
-                 <!-- Results Area-->
-                <div id="result">
-                  <i class="fa-solid fa-check"></i> <span id="score">0</span>
-                  <i class="fa-solid fa-x"></i> <span id="incorrect">0</span>
-                </div>
-              </div>
-              
-              <!--Questions End -->
-              <!-- Final score results area -->
-              <div id="final-area" class="hidden text-center">
-                <h2 id="final-heading">Well done, Detective!</h2>
-                <p id="final-summary"></p>
-              
-                <button id="play-again" class="btn">Play again</button>
-              </div>
-              <div id="rating" class="hidden rating-box">
-                <p>How would you rate this quiz?</p>
-                
-                <div id="stars">
-                  <span data-value="1">⭐</span>
-                  <span data-value="2">⭐</span>
-                  <span data-value="3">⭐</span>
-                  <span data-value="4">⭐</span>
-                  <span data-value="5">⭐</span>
-                </div>
-              </div>
-              <!-- End of final score results area-->
+  <!-- Main section-->
+  <main>
+    <div class="container-quiz text-center">
+      <!--Choose level start-->
+      <div id="choose-level-area" class="text-center flex-column">
+        <h2>Test Your Knowledge of Our Planet!</h2>
+        <form id="start-quiz" class="text-center">
+          <h3>Please enter your username:</h3>
+          <label for="username">Enter your username:</label>
+          <input type="text" name="username" id="username" class="btn" placeholder="" required>
 
+          <h3>Choose your level:</h3>
+          <div id="difficulty">
+            <button data-type="easy" class="btn btn-difficulty" data-level="easy" type="button">
+              Easy
+            </button>
+            <button data-type="medium" class="btn btn-difficulty" data-level="medium" type="button">
+              Medium
+            </button>
+            <button data-type="hard" class="btn btn-difficulty" data-level="hard" type="button">
+              Hard
+            </button>
+          </div>
+          <div class="play">
+            <button id="btn-start" data-type="start" class="btn" type="submit">
+              Start Quiz
+            </button>
+          </div>
+        </form>
+      </div>
+      <!--Choose level end-->
+      <!--Question start-->
+      <div id="question-area" class="hidden flex-center text-center">
+        <!-- Your Level-->
+        <div id="your-level">
+          <h2>You have choosen <span id="selected-level">x</span> level</h2>
+        </div>
+        <!-- Question progress area-->
+        <div id="progress" class="row">
+
+          <div class="left">
+            <p id="questions-number" class="question-number"></p>
           </div>
 
-     </main>
+          <div id="timer" class=" right">
+            <i class="fas fa-stopwatch"></i>
+            <span id="seconds"></span>
+          </div>
 
-     <!-- Footer-->
-     <footer>
-      
-     </footer>
+        </div>
+        <div id="question" class="questions"></div>
+        <div id="btn-answers" class="btn-choose-answer">
+          <button type="button" class="btn btn-answer">Option1</button>
+          <button type="button" class="btn btn-answer">Option2</button>
+          <button type="button" class="btn btn-answer">Option3</button>
+          <button type="button" class="btn btn-answer">Option4</button>
 
+        </div>
 
-    <!-- Font awsome kit-->
-    <script src="https://kit.fontawesome.com/5cfdac059a.js" crossorigin="anonymous"></script>
-    <!--Javascript-->
-    <script src="assets/js/script.js" ></script>
+        <!-- Results Area-->
+        <div id="result">
+          <i class="fa-solid fa-check"></i> <span id="score">0</span>
+          <i class="fa-solid fa-x"></i> <span id="incorrect">0</span>
+        </div>
+      </div>
+
+      <!--Questions End -->
+      <!-- Final score results area -->
+      <div id="final-area" class="hidden text-center">
+        <h2 id="final-heading">Well done, Detective!</h2>
+        <p id="final-summary"></p>
+
+        <button id="play-again" class="btn">Play again</button>
+      </div>
+      <div id="rating" class="hidden rating-box">
+        <p>How would you rate this quiz?</p>
+
+        <div>
+          <span id="stars" data-value="1">⭐</span>
+          <span id="stars" data-value="2">⭐</span>
+          <span id="stars" data-value="3">⭐</span>
+          <span id="stars" data-value="4">⭐</span>
+          <span id="stars" data-value="5">⭐</span>
+        </div>
+      </div>
+      <!-- End of final score results area-->
+
+    </div>
+
+  </main>
+
+  <!-- Font awsome kit-->
+  <script src="https://kit.fontawesome.com/5cfdac059a.js" crossorigin="anonymous"></script>
+  <!--Javascript-->
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
