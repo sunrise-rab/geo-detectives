@@ -5,8 +5,15 @@ Built with HTML, CSS, and JavaScript, the project uses the Open Trivia Database 
 ![Geo Detectives](docs/geo-detectives.png)
 
 ## Rationale
-Geo Detectives was created to make geography learning interactive and exciting for children.  
-It extends the ideas of my previous project, Bond, by combining creativity, curiosity, and education through gameplay.
+Geo Detectives was created to transform geography learning into an engaging, playful, and accessible experience for children. After completing my first project, Bond, which focused on emotional wellbeing, creativity, and self-expression for young learners, I wanted to extend this idea into the academic world — specifically into a subject that many children often find challenging or boring: geography.
+
+Children can struggle with memorising capitals, countries, landmarks, and world facts because traditional learning relies heavily on textbooks and rote memorisation. Geo Detectives aims to solve this by turning learning into a fun, game-based experience that encourages exploration and curiosity rather than pressure. Instead of reading long information, children answer small, clear, bite-sized questions that help build general knowledge step-by-step.
+
+This project was inspired by the belief that learning becomes more meaningful when it feels like an adventure. Each question encourages children to think like detectives — observing clues, making predictions, and discovering something new. With every correct answer, their confidence grows; with every new question, their curiosity deepens.
+
+The visuals, colour palette, and world-map background create an immersive atmosphere that helps children stay focused without distraction. The simple layout, timed questions, and clean buttons make the quiz accessible even for younger learners or those who need structure to stay engaged.
+
+As a parent, I understand how important it is to have tools that are safe, educational, and easy to use. My own children have been playing the quiz many times throughout the development process, and it has been amazing to see how quickly they learned new world facts — from capitals to famous landmarks and countries they had never heard of before. Watching them improve, get excited about their scores, and proudly share new information with me has been a big motivation for completing this project.
 
 ## User Goals
 - Children want fun and challenging questions that can challenge their knowledge about geography subject.
@@ -21,7 +28,6 @@ It extends the ideas of my previous project, Bond, by combining creativity, curi
 | User | User Story | Task |
 |----|-------------|-----------------------------|
 | As a child/student| I want to play quiz with timer & levels to chalange my knowledge about geography subject| Start, choose level, timed question rotation |
-| As a parent/teacher/ student | I want to be able to easily contact content creators for feedback or changes. |  Feedback form |
 | As a user | I want the score system to be transparent| Display the total score at the end of the game |
 | As a user| I want the game to be tempting me to play again and get a better score | End-of-quiz badges and button asking me to play again to get a better score|
 | As a user | I want the instructions to be clear, concise and easily accessible| Help and instructions button |
@@ -74,7 +80,7 @@ I have also used [Contrast Grid](https://contrastgrid.com/?xAxisData=%255B%257B%
 
 ### Images
 
-I downloaded the Background image from [FREEPIK](https://www.freepik.com/). It is a vintage-style world map used as the website’s background to reflect the theme of exploration and geography. 
+I Generated the Background image from [ChatGPT](https://chatgpt.com/).It is a  world map used as the website’s background to reflect the theme of exploration and geography. 
 
 ### Responsiveness
 
@@ -85,7 +91,7 @@ My website is responsive to different layouts depending on the size of the viewp
 
 ## Features
 
-Layout is easy to use and adheres to the best practices in formatting and styling. Players can easily navigate between questions and access additional features such as high scores and contact information.
+Layout is easy to use and adheres to the best practices in formatting and styling. Players can easily navigate between questions.
 With a countdown timer, multiple-choice questions and real-time feedback on right and wrong responses, the quiz offers users an engaging experience. This interactive feature increases user engagement and motivates users to take knowledge tests.
 
 ### Existing Features
