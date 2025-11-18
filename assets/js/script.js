@@ -2,13 +2,13 @@ const buttons = document.querySelectorAll('.btn-difficulty');
 const loaderRef = document.querySelector("#loader");
 const questionAreaRef = document.querySelector("#question-area");
 const instructions = document.querySelector("#howToPlay");
-const howToBtn = document.querySelector('#howTo')
+const howToBtn = document.querySelector('#howTo');
 const form = document.querySelector("#start-quiz");
 const chooseLevelAreaRef = document.querySelector("#choose-level-area");
 const startButton = document.querySelector("#btn-start");
 const selectedLevel = document.querySelector("#selected-level");
 const usernameRef = document.querySelector("#username");
-const answersEl = document.querySelectorAll(".btn-answer")
+const answersEl = document.querySelectorAll(".btn-answer");
 const questionEl = document.querySelector('#question');
 const scoreEl    = document.querySelector('#score');       
 const wrongEl    = document.querySelector('#incorrect');
@@ -26,9 +26,7 @@ let wrongScore = 0;
 let score = 1;
 let questionNumber = 10;
 let questions = [];
-let questionIndex = 0;
 const maxQuestions = 10;
-let acceptingAnswers = true;
 let timeCounter;
 
 const displayArea = el => el.classList.remove('hidden');
@@ -65,7 +63,7 @@ buttons.forEach(button => {
   
   const incrementWrongScore = (num) => {
     wrongScore += num;
-    wrongEl.textContent = wrongScore; }
+    wrongEl.textContent = wrongScore; };
   
 
 
@@ -92,7 +90,7 @@ buttons.forEach(button => {
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const activeBtn = document.querySelector(".btn-difficulty.active")
+    const activeBtn = document.querySelector(".btn-difficulty.active");
     const level = activeBtn ? activeBtn.dataset.level : null;
     const myUsername = usernameRef.value.trim();
 
@@ -115,18 +113,18 @@ buttons.forEach(button => {
 
 async function startGame(level) {
   try{
-  questions = await loadQuestion(level)
+  questions = await loadQuestion(level);
   questionNumber = 0;
 
   if(questionNumber >= questions.length){
-    endQuiz
+    endQuiz();
   }else{
-    renderQuestion()
+    renderQuestion();
   }
 } catch(Error){                                                           
   console.error(Error);
   }
-};
+}
 
 /**
 * @param {Array} results - The data from the API
@@ -141,7 +139,7 @@ function formatQuestions(results){
      const answers  = shuffle([correct, ...wrongs]);
      return {question, correct, answers}
   });
-};
+}
 
 /**
  * formmate any special characters in the questions and answers and return a string
@@ -188,14 +186,14 @@ function renderQuestion(){
   return endQuiz();
   }
   clearStatusClass(answersEl);
-  const currentQuestion = questions[questionNumber]
+  const currentQuestion = questions[questionNumber];
   questionEl.textContent = currentQuestion.question;
   answersEl.forEach((btn, i) =>{
     btn.innerHTML= currentQuestion.answers[i];
     btn.addEventListener("click", onAnswerClick);
     
   })
-  questionProgress.innerHTML=`Question ${questionNumber + 1} out of ${maxQuestions}`
+  questionProgress.innerHTML=`Question ${questionNumber + 1} out of ${maxQuestions}`;
   questionNumber++;
   startTimer();
 }
@@ -218,7 +216,7 @@ function onAnswerClick(e){
  */
 
 function checkAnswer(ansChosen){
-  const currentQuestion = questions[questionNumber - 1]
+  const currentQuestion = questions[questionNumber - 1];
   const btnChosen = Array.from (answersEl).find((button) => button.textContent === ansChosen);
   const applyClass = ansChosen === currentQuestion.correct ? "correct" : "wrong";
   btnChosen.classList.add(applyClass);
@@ -241,7 +239,7 @@ function checkAnswer(ansChosen){
   
 }
 
-const showCorrectAnswer = () =>{}
+
 const clearStatusClass = (button) => {
   button.forEach((btn) => {
     btn.classList.remove("correct", "wrong");
@@ -269,10 +267,10 @@ playAgainBtn.addEventListener('click', () => {
   scoreEl.textContent = '0';
   wrongEl.textContent = '0';
   usernameRef.value =''
-  buttons.forEach(btn => btn.classList.remove('active'))
+  buttons.forEach(btn => btn.classList.remove('active'));
   hideArea(finalAreaRef);
   displayArea(chooseLevelAreaRef);
-  hideArea(ratingRef)
+  hideArea(ratingRef);
 });
 
 stars.forEach(star => {
@@ -295,7 +293,7 @@ function endQuiz() {
 
   hideArea(questionAreaRef);
   displayArea(finalAreaRef);
-  displayArea(ratingRef)
+  displayArea(ratingRef);
 
   const totalQuestions = questions.length;
   const correct = correctScore;
@@ -310,12 +308,6 @@ function endQuiz() {
     finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}.Don’t worry – even great detectives need training.`;
   }
 }
-
-
-
-/*document.getElementById("rateQuizBtn").addEventListener("click", () => {
-  popup.classList.remove("hidden");
-});*/
 
 
 
