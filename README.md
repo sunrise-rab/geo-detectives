@@ -124,6 +124,10 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
       ![Quiz Form](docs/quiz-form.png)
       ![Required Informations](docs/required-informations.png)
 
+ 4. Display loader
+  -  It is added to remove any empty display of question box while content is being loaded from [Open Trivia db]("https://opentdb.com/" "Open Trivia db").
+       ![Load page](docs/load.png)
+
  4. Dynamic question area with a timer and incremented right and wrong score 
 
   - Displays questions from OpenTriviaDB in a clean and readable format.
@@ -135,9 +139,10 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
   - A live 20-second timer for each question.
   - Automatically moves to the next question when time runs out.
   - Timer is positioned on the right to balance layout.
-  - Displays Correct answers and Incorrect answers which Updates immediately after each question, this Helps children understand their progress and keep motivated.
-     ![Questions Area](docs/question-area.png)
-     ![Right Answer](docs/right-answer.png)
+  
+     ![Questions Area](docs/question-area.png)<br>
+- Displays Correct answers and Incorrect answers which Updates immediately after each question, this Helps children understand their progress and keep motivated.
+     ![Right Answer](docs/right-answer.png)<br>
     ![Wrong answer](docs/wrong-answer.png)
     
 5. Responsive Design
@@ -189,15 +194,51 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
 
 ### Tools
 
-* [GitHub](https://github.com/ "GitHub")
-* [Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq")
-* [Image Resize](https://squoosh.app/)
-* [Color Contrast](https://contrastgrid.com/)
-* [Open Trivia DB](https://opentdb.com/ "Open Trivia DB")
+- [GitHub](https://github.com/ "GitHub")
+- [Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq")
+- [Image Resize](https://squoosh.app/)
+- [Color Contrast](https://contrastgrid.com/)
+- [Open Trivia DB](https://opentdb.com/ "Open Trivia DB")
 - [Colour Palette](https://coolors.co/)
+- W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML")
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS")
+- [JSHint](https://jshint.com/ "JSHint")
+- [TOC Generator](https://ecotrust-canada.github.io/markdown-toc/ "TOC Generator")
+- [Am I Responsive](https://ui.dev/amiresponsive "Am I responsive")
+- [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker")
+- [WAVE Accessibility Tool](https://wave.webaim.org/ "WAVE Accessibility Tool")
+- [Color Contrast Accessibility Validator](https://color.a11y.com/ "Color Contrast Accessibility Validator")
 
 
 ## Testing
+
+### Code Validation
+
+#### HTML
+
+I have used [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML"). I tested the html file. It displays no errors.
+
+![W3C HTML Validator](docs/html-checker.png "W3C HTML Validator index.html")
+
+
+[Back to contents](#contents)
+
+### CSS
+
+CSS code for the webpage was validated on [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator"). It displays no errors
+
+![W3C CSS Validator](docs/css-checker.png "W3C CSS Validator results")
+
+[Back to contents](#contents)
+
+### JavaScript
+
+JS code was validated on [JSHint](https://jshint.com/ "JSHint"). some warnings were identified and they have been fixed.
+
+![JS Validation Image](docs/jshint.png)
+
+[Back to content](#contents)
+
 
 
 
