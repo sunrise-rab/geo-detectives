@@ -95,17 +95,82 @@ Layout is easy to use and adheres to the best practices in formatting and stylin
 With a countdown timer, multiple-choice questions and real-time feedback on right and wrong responses, the quiz offers users an engaging experience. This interactive feature increases user engagement and motivates users to take knowledge tests.
 
 ### Existing Features
+1. Header section
+
+  - Display the website title "Geo Detectives" using a child-friendly font.
+  - Includes a " How yo play" button that toggles a slide-down instruction box.
+  - Fully responsive across screens.
+      ![Header](docs/header.png)
+
+2. How to Play with a sliding instructions Box
+
+  - A hidden instruction panel that appears when the user clicks “How to Play”
+  - Provides simple, clear steps explaining how the quiz works.
+  - Helps children understand the rules without overwhelming them.
+  - Uses smooth show/hide logic for a better user experience.
+      ![How to Play](docs/how-to-play.png)
+    
+3. Welcome message & the quiz form
+
+  - Friendly introductory message: “Test Your Knowledge of Our Planet!”
+  - A username input field to personalise gameplay.
+  - Form validation ensures the username is entered before starting the quiz
+  - Three difficulty buttons connected to the Open Trivia Database.
+  - Buttons become highlighted when selected (active state).
+  - Difficulty determines the complexity of questions fetched.
+  - Designed to help children choose a level matching their confidence.
+  - Begins the quiz only when a username is entered and difficulty level is selected
+  - Displays a loading animation before the questions appear.
+      ![Quiz Form](docs/quiz-form.png)
+      ![Required Informations](docs/required-informations.png)
+
+ 4. Dynamic question area with a timer and incremented right and wrong score 
+
+  - Displays questions from OpenTriviaDB in a clean and readable format.
+  - Correct and incorrect answers are automatically shuffled.
+  - Answer buttons update for each question.
+  - Buttons lock after a selection to prevent repeated answers.
+  - Shows progress Helps users track how many questions remain.
+  - Positioned on the left for better balance with the timer.
+  - A live 20-second timer for each question.
+  - Automatically moves to the next question when time runs out.
+  - Timer is positioned on the right to balance layout.
+  - Displays Correct answers and Incorrect answers which Updates immediately after each question, this Helps children understand their progress and keep motivated.
+     ![Questions Area](docs/question-area.png)
+     ![Right Answer](docs/right-answer.png)
+    ![Wrong answer](docs/wrong-answer.png)
+    
+5. Responsive Design
+
+   - Functional on Mobile phones, Tablets and Desktop screens.
+   - Layout rearranges for smaller screens for easy readability.
+
+     ![Geo Detectives](docs/geo-detectives.png)
+
+ 6. End-Quiz Summary Page
+
+   - Shows the final score out of 10.
+   - Motivational message encouraging the player.
+   - Includes a “Play Again” button which resets scores, clears username, clears selected difficulty and brings the user back to the starting screen
+      ![End-Quiz](docs/end-quiz.png)
+     
+ 7. Clean & Child-Friendly Styling
+
+   - Soft colour palette inspired by natural earth tones.
+   - Rounded containers and gentle shadows for a friendly feel.
+   - Calm world-map background that stays blurred for readability.
+   - Clear, easy-to-read fonts designed for children.
+  
 
 
 ### Future Enhancements
 
+* Display the correct answer after the user chooses his answer.
 * Multiple player option.
-* Online scoreboard that includes all players.
+* Add a leaderboard that includes all players'scores.
 * Share results on Social Media. 
-* Option to store the progress and return to the quiz at a later time, allowing to finish it at user's pace and not lose any of the questions already completed.
-* Broaden range of animation topics such as principles of animation, software tools, and industry best practices.
+* At the end of the quiz list all the correct answers and the user answers.
 * Provide hints or additional resources for challenging questions.
-* Time-adjustable quiz where player can select a time limit for each question, all questions or have no limitless time to complete.
 
 [Back to top](#contents)
 
