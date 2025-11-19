@@ -6,7 +6,6 @@ const instructions = document.querySelector("#howToPlay");
 const howToBtn = document.querySelector('#howTo');
 const form = document.querySelector("#start-quiz");
 const chooseLevelAreaRef = document.querySelector("#choose-level-area");
-const startButton = document.querySelector("#btn-start");
 const selectedLevel = document.querySelector("#selected-level");
 const usernameRef = document.querySelector("#username");
 const answersEl = document.querySelectorAll(".btn-answer");
@@ -31,7 +30,7 @@ let timeCounter;
 
 const displayArea = (el) => el.classList.remove('hidden');
 const hideArea = (el) => el.classList.add('hidden');
-const shuffle = (answers) => answers.sort(() => Math.random() - .5);
+const shuffle = (answers) => answers.sort(() => Math.random() - 0.5);
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
@@ -51,7 +50,7 @@ howToBtn.addEventListener('click', () => {
 const incrementCorrectScore = (incrementedCorrect) => {
   correctScore += incrementedCorrect;
   scoreEl.textContent = correctScore;
-}
+};
 
 /**
  * Increment wrong scores.
@@ -114,7 +113,7 @@ const startTimer = () => {
   } else {
     finalSummaryEl.textContent = `You scored ${correct} out of ${totalQuestions}. Do not worry even great detectives need training.`;
   }
-}
+};
 
 /**
 * @param {Array} results - The data from the API
@@ -126,9 +125,9 @@ const formatQuestions = (results) => {
     const correct = q.correct_answer;
     const wrongs = q.incorrect_answers;
     const answers = shuffle([correct, ...wrongs]);
-    return { question, correct, answers }
+    return { question, correct, answers };
   });
-}
+};
 
 /**
  * Fetches trivia questions from the Open Trivia Database API based on the specified difficulty.
@@ -147,7 +146,7 @@ const loadQuestion = async(difficulty) =>{
   }
   const data = await result.json();
   return formatQuestions(data.results);
-}
+};
 
 
 
@@ -169,7 +168,7 @@ const startGame = async (level) => {
   } catch (Error) {
     console.error(Error);
   }
-}
+};
 
 /**
 * Display the question and answer options.
@@ -187,11 +186,11 @@ const renderQuestion = () => {
     btn.innerHTML = currentQuestion.answers[i];
     btn.addEventListener("click", onAnswerClick);
 
-  })
+  });
   questionProgress.innerHTML = `Question ${questionNumber + 1} out of ${maxQuestions}`;
   questionNumber++;
   startTimer();
-}
+};
 
 /** 
  * @param {string} e retrieve the selected answer. 
@@ -200,7 +199,7 @@ const onAnswerClick = (e) => {
   const ansChosen = e.target.innerHTML;
   checkAnswer(ansChosen);
 
-}
+};
 
 /**
  * find the button corresponding to the choosen answer and apply correct or wrong style to it.
@@ -224,7 +223,7 @@ const checkAnswer = (ansChosen) => {
       incrementWrongScore(score);
     }
   }
-}
+};
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -248,7 +247,7 @@ playAgainBtn.addEventListener('click', () => {
   questionNumber = 0;
   scoreEl.textContent = '0';
   wrongEl.textContent = '0';
-  usernameRef.value = ''
+  usernameRef.value = '';
   buttons.forEach(btn => btn.classList.remove('active'));
   hideArea(finalAreaRef);
   displayArea(chooseLevelAreaRef);
