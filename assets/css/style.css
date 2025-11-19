@@ -356,9 +356,9 @@ label {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.rating-box h4 {
+.rating-box p {
   color: var(--warm-taupe);
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
