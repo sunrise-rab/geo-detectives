@@ -27,7 +27,7 @@ As a parent, I understand how important it is to have tools that are safe, educa
   ## User Stories
 | User | User Story | Task |
 |----|-------------|-----------------------------|
-| As a child/student| I want to play quiz with timer & levels to chalange my knowledge about geography subject| Start, choose level, timed question rotation |
+| As a child/student| I want to play quiz with levels to chalange my knowledge about geography subject| Start, choose level |
 | As a user | I want the score system to be transparent| Display the total score at the end of the game |
 | As a user| I want the game to be tempting me to play again and get a better score | End-of-quiz encouraging message and button asking me to play again to get a better score|
 | As a user | I want the instructions to be clear, concise and easily accessible| How to play button |
@@ -219,24 +219,31 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
 I have used [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML"). I tested the html file. It displays no errors.
 ![W3C HTML Validator](docs/html-checker.png "W3C HTML Validator index.html")
 
-[Back to contents](#contents)
 
 ### CSS
 
 CSS code for the webpage was validated on [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator"). It displays no errors
 
 ![W3C CSS Validator](docs/css-checker.png "W3C CSS Validator results")
-[Back to contents](#contents)
+[
 
 ### JavaScript
 
 JS code was validated on [JSHint](https://jshint.com/ "JSHint"). some warnings were identified and they have been fixed.
 ![JS Validation Image](docs/jshint.png)
-[Back to content](#contents)
+
+ ## User Stories testing
+| User Story | Result | Screenshot |
+|------------|-------------------------|-----------------------------|
+| As a child/student, I want to play quiz with levels to chalange my knowledge about geography subject| When the home page load there is a form where user can enter their username and choose level of difficulty they would like to play then they can press Start Quiz button to start the quiz| [Form quiz](docs/user-story1.png "Form quiz") |
+| As a user, I want the score system to be transparent| Each time the user press on the choosen answer the right and wrong scores will be displayed at the bottom of the displayed answers | [Transparent scores](docs/user-story2.png "Transparent quiz")|
+| As a user, I want the game to be tempting me to play again and get a better score | At the end of the quiz the user will be shown a button asking the user to play again| [Play again button](docs/user-story5-3.png "Play again")|
+| As a user, I want the instructions to be clear, concise and easily accessible| At the top right of home page there is a button "How to Play" by clicking on these the user can access clear and ordered steps of how to play the quiz|[How to Play](docs/user-story4.png "How to play")|
+| As a user, I want to receive immediate feedback on my quiz answers| When the quiz reaches the end a message will be displayed to tell the user how they did |[Feedback message](docs/user-story5-3.png "Feedback Message") |
 
 ### Lighthouse Testing
 
-Geo-detectives has been tested in the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and [Microsoft Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/open/?tabs=cmd-Windows) using Lighthouse Testing tool which inspects and scores the website for the following criteria:
+Geo-detectives has been tested in the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and [Microsoft Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/open/?tabs=cmd-Windows) using Lighthouse Testing tool which inspects and scores the website for the following criteria.
 
 - Performance - how quickly a website loads and how quickly users can access it.
 - Accessibility - test analyses how well people who use assistive technologies can use your website.
@@ -255,8 +262,6 @@ Tests for Desktop Lighthouse Edge:
 Tests for Mobile on Lighthouse Edge:
 ![Lighthouse-Mobile-Edge-Index](docs/lighthouse-edge-phone.png "Lighthouse-Mobile-Edge-Index")
 
-
-[Back to content](#contents)
 
 
 
