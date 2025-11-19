@@ -200,7 +200,7 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
 - [Color Contrast](https://contrastgrid.com/)
 - [Open Trivia DB](https://opentdb.com/ "Open Trivia DB")
 - [Colour Palette](https://coolors.co/)
-- W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML")
+- [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML")
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS")
 - [JSHint](https://jshint.com/ "JSHint")
 - [TOC Generator](https://ecotrust-canada.github.io/markdown-toc/ "TOC Generator")
@@ -217,9 +217,7 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
 #### HTML
 
 I have used [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML"). I tested the html file. It displays no errors.
-
 ![W3C HTML Validator](docs/html-checker.png "W3C HTML Validator index.html")
-
 
 [Back to contents](#contents)
 
@@ -228,16 +226,39 @@ I have used [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML").
 CSS code for the webpage was validated on [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator"). It displays no errors
 
 ![W3C CSS Validator](docs/css-checker.png "W3C CSS Validator results")
-
 [Back to contents](#contents)
 
 ### JavaScript
 
 JS code was validated on [JSHint](https://jshint.com/ "JSHint"). some warnings were identified and they have been fixed.
-
 ![JS Validation Image](docs/jshint.png)
+[Back to content](#contents)
+
+### Lighthouse Testing
+
+Geo-detectives has been tested in the [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) and [Microsoft Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/open/?tabs=cmd-Windows) using Lighthouse Testing tool which inspects and scores the website for the following criteria:
+
+- Performance - how quickly a website loads and how quickly users can access it.
+- Accessibility - test analyses how well people who use assistive technologies can use your website.
+- Best Practices - checks whether the page is built on the modern standards of web development.
+- SEO - checks if the website is optimised for search engine result rankings.
+
+Tests for Desktop on Lighthouse Chrome:
+![Lighthouse-Desktop-Chrome-Index](docs/chrome-lighthouse-desk.png "Lighthouse-Desktop-Chrome-Index")
+
+Tests for Mobile on Lighthouse Chrome:
+![Lighthouse-Mobile-Chrome-Index](docs/chrome-lighthouse-phone.png "Lighthouse-Mobile-Chrome-Index")
+
+Tests for Desktop Lighthouse Edge:
+![Lighthouse-Desktop-Edge-Index](docs/lighthouse-edge-desktop.png "Lighthouse-Desktop-Edge-Index")
+
+Tests for Mobile on Lighthouse Edge:
+![Lighthouse-Mobile-Edge-Index](docs/lighthouse-edge-phone.png "Lighthouse-Mobile-Edge-Index")
+
 
 [Back to content](#contents)
+
+
 
 
 
