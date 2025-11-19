@@ -5,15 +5,15 @@ Built with HTML, CSS, and JavaScript, the project uses the Open Trivia Database 
 ![Geo Detectives](docs/geo-detectives.png)
 
 ## Rationale
-Geo Detectives was created to transform geography learning into an engaging, playful, and accessible experience for children. After completing my first project, Bond, which focused on emotional wellbeing, creativity, and self-expression for young learners, I wanted to extend this idea into the academic world — specifically into a subject that many children often find challenging or boring: geography.
+Geo Detectives was created to transform geography learning into an engaging, playful, and accessible experience for children. After completing my first project, Bond, which focused on emotional wellbeing, creativity, and self-expression for young learners, I wanted to extend this idea into the academic world  specifically into a subject that many children often find challenging or boring: geography.
 
 Children can struggle with memorising capitals, countries, landmarks, and world facts because traditional learning relies heavily on textbooks and rote memorisation. Geo Detectives aims to solve this by turning learning into a fun, game-based experience that encourages exploration and curiosity rather than pressure. Instead of reading long information, children answer small, clear, bite-sized questions that help build general knowledge step-by-step.
 
-This project was inspired by the belief that learning becomes more meaningful when it feels like an adventure. Each question encourages children to think like detectives — observing clues, making predictions, and discovering something new. With every correct answer, their confidence grows; with every new question, their curiosity deepens.
+This project was inspired by the belief that learning becomes more meaningful when it feels like an adventure. Each question encourages children to think like detectives, observing clues, making predictions, and discovering something new. With every correct answer, their confidence grows; with every new question, their curiosity deepens.
 
 The visuals, colour palette, and world-map background create an immersive atmosphere that helps children stay focused without distraction. The simple layout, timed questions, and clean buttons make the quiz accessible even for younger learners or those who need structure to stay engaged.
 
-As a parent, I understand how important it is to have tools that are safe, educational, and easy to use. My own children have been playing the quiz many times throughout the development process, and it has been amazing to see how quickly they learned new world facts — from capitals to famous landmarks and countries they had never heard of before. Watching them improve, get excited about their scores, and proudly share new information with me has been a big motivation for completing this project.
+As a parent, I understand how important it is to have tools that are safe, educational, and easy to use. My own children have been playing the quiz many times throughout the development process, and it has been amazing to see how quickly they learned new world facts, from capitals to famous landmarks and countries they had never heard of before. Watching them improve, get excited about their scores, and proudly share new information with me has been a big motivation for completing this project.
 
 ## User Goals
 - Children want fun and challenging questions that can challenge their knowledge about geography subject.
@@ -29,8 +29,8 @@ As a parent, I understand how important it is to have tools that are safe, educa
 |----|-------------|-----------------------------|
 | As a child/student| I want to play quiz with timer & levels to chalange my knowledge about geography subject| Start, choose level, timed question rotation |
 | As a user | I want the score system to be transparent| Display the total score at the end of the game |
-| As a user| I want the game to be tempting me to play again and get a better score | End-of-quiz badges and button asking me to play again to get a better score|
-| As a user | I want the instructions to be clear, concise and easily accessible| Help and instructions button |
+| As a user| I want the game to be tempting me to play again and get a better score | End-of-quiz encouraging message and button asking me to play again to get a better score|
+| As a user | I want the instructions to be clear, concise and easily accessible| How to play button |
 | As a user | I want to receive immediate feedback on my quiz answers| Display a message at the end of the quiz to tell user how they did and encourge them to try again| 
 
 ## Targeted Audience
