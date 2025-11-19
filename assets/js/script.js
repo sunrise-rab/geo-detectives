@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 const buttons = document.querySelectorAll('.btn-difficulty');
 const loaderRef = document.querySelector("#loader");
 const questionAreaRef = document.querySelector("#question-area");
