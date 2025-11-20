@@ -4,6 +4,40 @@ Built with HTML, CSS, and JavaScript, the project uses the Open Trivia Database 
 
 ![Geo Detectives](docs/geo-detectives.png)
 
+- [Geo Detectives](#contents)
+  * [Rationale](#rationale)
+  * [User Goals](#user-goals)
+  * [User Stories](#user-stories)
+  * [Targeted Audience](#targeted-audience)
+  * [Wirefrmes](#wirefrmes)
+  * [Design Choices](#design-choices)
+    + [Typography](#typography)
+    + [Colour Palette](#colour-palette)
+    + [Images](#images)
+    + [Responsiveness](#responsiveness)
+  * [Features](#features)
+    + [Existing Features](#existing-features)
+    + [Future Enhancements](#future-enhancements)
+  * [Technologies Used](#technologies-used)
+    + [Languages](#languages)
+    + [Libraries & Framework](#libraries---framework)
+    + [Tools](#tools)
+  * [Testing](#testing)
+    + [Bugs](#bugs)
+    + [Code Validation](#code-validation)
+      - [HTML](#html)
+    + [CSS](#css)
+    + [JavaScript](#javascript)
+  * [User Stories testing](#user-stories-testing)
+    + [Lighthouse Testing](#lighthouse-testing)
+  * [Deployment](#deployment)
+    + [Fork the project](#fork-the-project)
+    + [To clone the project](#to-clone-the-project)
+    + [Credits](#credits)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Rationale
 Geo Detectives was created to transform geography learning into an engaging, playful, and accessible experience for children. After completing my first project, Bond, which focused on emotional wellbeing, creativity, and self-expression for young learners, I wanted to extend this idea into the academic world  specifically into a subject that many children often find challenging or boring: geography.
 
@@ -15,6 +49,7 @@ The visuals, colour palette, and world-map background create an immersive atmosp
 
 As a parent, I understand how important it is to have tools that are safe, educational, and easy to use. My own children have been playing the quiz many times throughout the development process, and it has been amazing to see how quickly they learned new world facts, from capitals to famous landmarks and countries they had never heard of before. Watching them improve, get excited about their scores, and proudly share new information with me has been a big motivation for completing this project.
 
+[Back to contents](#contents)
 ## User Goals
 - Children want fun and challenging questions that can challenge their knowledge about geography subject.
 - Teachers want a tool that’s easy and fun to use in classrooms which create competition within the classroom students by saving palyers scores.
@@ -25,13 +60,15 @@ As a parent, I understand how important it is to have tools that are safe, educa
 
 
   ## User Stories
-| User | User Story | Task |
+| **User** | **User Story** | **Task** |
 |----|-------------|-----------------------------|
 | As a child/student| I want to play quiz with levels to chalange my knowledge about geography subject| Start, choose level |
 | As a user | I want the score system to be transparent| Display the total score at the end of the game |
 | As a user| I want the game to be tempting me to play again and get a better score | End-of-quiz encouraging message and button asking me to play again to get a better score|
 | As a user | I want the instructions to be clear, concise and easily accessible| How to play button |
 | As a user | I want to receive immediate feedback on my quiz answers| Display a message at the end of the quiz to tell user how they did and encourge them to try again| 
+
+[Back to contents](#contents)
 
 ## Targeted Audience
 School children (Primary and secondary) who are developing their understanding of continents, countries, and landmarks in an engaging format.
@@ -45,6 +82,8 @@ These visual mockups helped me organise each section — from the home screen an
 ![Phone Wireframe](docs/phone-wireframe.pdf)<br>
 ![Ipad Wireframe](docs/ipad-wireframe.pdf)<br>
 ![Desktop Wireframe](docs/desktop-wireframe.pdf).<br>
+
+[Back to contents](#contents)
 
 ## Design Choices
 ### Typography
@@ -78,6 +117,8 @@ I have also used [Contrast Grid](https://contrastgrid.com/?xAxisData=%255B%257B%
 |     --wrong-answer-red   | #ff3333   | Color for wrong answer button                                                 |
 |     --right-answer-green | #51BF83   | Color for correct answer button, color for check icon                         |
 
+[Back to contents](#contents)
+
 ### Images
 
 I Generated the Background image from [ChatGPT](https://chatgpt.com/).It is a  world map used as the website’s background to reflect the theme of exploration and geography. 
@@ -88,7 +129,7 @@ My website is responsive to different layouts depending on the size of the viewp
 
 ![Breakpoints](docs/break-in-point.png)
 
-
+[Back to contents](#contents)
 ## Features
 
 Layout is easy to use and adheres to the best practices in formatting and styling. Players can easily navigate between questions.
@@ -120,15 +161,17 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
   - Difficulty determines the complexity of questions fetched.
   - Designed to help children choose a level matching their confidence.
   - Begins the quiz only when a username is entered and difficulty level is selected
-  - Displays a loading animation before the questions appear.
+ 
       ![Quiz Form](docs/quiz-form.png)
       ![Required Informations](docs/required-informations.png)
 
- 4. Display loader
-  -  It is added to remove any empty display of question box while content is being loaded from [Open Trivia db]("https://opentdb.com/" "Open Trivia db").
+ 4. loader
+
+    - Displays a loading animation before the questions appear.
+    -  It is added to remove any empty display of question box while content is being loaded from [Open Trivia db]("https://opentdb.com/" "Open Trivia db").
        ![Load page](docs/load.png)
 
- 4. Dynamic question area with a timer and incremented right and wrong score 
+ 5. Dynamic question area with a timer and incremented right and wrong score 
 
   - Displays questions from OpenTriviaDB in a clean and readable format.
   - Correct and incorrect answers are automatically shuffled.
@@ -145,21 +188,21 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
      ![Right Answer](docs/right-answer.png)<br>
     ![Wrong answer](docs/wrong-answer.png)
     
-5. Responsive Design
+6. Responsive Design
 
    - Functional on Mobile phones, Tablets and Desktop screens.
    - Layout rearranges for smaller screens for easy readability.
 
      ![Geo Detectives](docs/geo-detectives.png)
 
- 6. End-Quiz Summary Page
+ 7. End-Quiz Summary Page
 
    - Shows the final score out of 10.
    - Motivational message encouraging the player.
    - Includes a “Play Again” button which resets scores, clears username, clears selected difficulty and brings the user back to the starting screen
       ![End-Quiz](docs/end-quiz.png)
      
- 7. Clean & Child-Friendly Styling
+ 8. Clean & Child-Friendly Styling
 
    - Soft colour palette inspired by natural earth tones.
    - Rounded containers and gentle shadows for a friendly feel.
@@ -177,7 +220,7 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
 * At the end of the quiz list all the correct answers and the user answers.
 * Provide hints or additional resources for challenging questions.
 
-[Back to top](#contents)
+[Back to contents](#contents)
 
 ## Technologies Used
 
@@ -209,9 +252,25 @@ With a countdown timer, multiple-choice questions and real-time feedback on righ
 - [WAVE Accessibility Tool](https://wave.webaim.org/ "WAVE Accessibility Tool")
 - [Color Contrast Accessibility Validator](https://color.a11y.com/ "Color Contrast Accessibility Validator")
 
-
+[Back to contents](#contents)
 ## Testing
 
+### Bugs
+
+| **Bug**                                          | **Description**                                                             | ** Steps Taken**                                                                                 | **Status** |
+| ------------------------------------------------ | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------- |
+| Loading animation not showing                    | The loader didn’t appear before the questions were displayed.               | Added `displayArea(loaderRef)` before API fetch and `hideArea(loaderRef)` after questions load. | ✔ Fixed    |
+| Difficulty button not becoming active            | `.active` class wasn’t applied properly, so selected level didn’t register. | Updated event listener to remove `.active` from all buttons before adding to the clicked one.   | ✔ Fixed    |
+| "How to Play" box not showing on click           | Hover styles interfered with display logic.                                 | Replaced inline `style.display` with `.classList.toggle("visible")` and updated CSS.            | ✔ Fixed    |
+| Questions not loading / empty screen             | `loadQuestion()` was returning a promise instead of awaited data.           | Added `await loadQuestion(level)` inside `startGame()`.                                         | ✔ Fixed    |
+| Timer overlapping on small screens               | Timer moved on top of the question text on narrow devices.                  | Added mobile media query to stack header elements vertically.                                   | ✔ Fixed    |
+| Username/difficulty not clearing when restarting | “Play Again” button restarted game but kept old name and level active.      | Added reset logic: `usernameRef.value = ""` and removed `.active` from difficulty buttons.      | ✔ Fixed    |
+| Answer buttons not updating                      | Text stayed the same for every question.                                    | Added loop in `renderQuestion()` to assign `btn.textContent = q.answers[i]`.                    | ✔ Fixed    |
+| Time running after choosing an answer            | Timer continued counting even after user clicked an answer.                 | Added `clearInterval(timerId)` inside `onAnswerClick()`.                                        | ✔ Fixed    |
+| Header layout broken on mobile                   | Title and button stayed on one row and overlapped.                          | Added media query with `flex-direction: column` for small screens.                              | ✔ Fixed    |
+|Small white circle appears under the loading animation| When the loader animation is displayed, a small white circular shape appears underneath the spinner.| Adjusted loader container styling, attempted to fully hide child elements using display: none. issue still persists and requires further debugging|Unresolved|
+
+[Back to contents](#contents)
 ### Code Validation
 
 #### HTML
@@ -232,6 +291,8 @@ CSS code for the webpage was validated on [W3C CSS Validation Service](https://j
 JS code was validated on [JSHint](https://jshint.com/ "JSHint"). some warnings were identified and they have been fixed.
 ![JS Validation Image](docs/jshint.png)
 
+[Back to contents](#contents)
+
  ## User Stories testing
 | User Story | Result | Screenshot |
 |------------|-------------------------|-----------------------------|
@@ -240,6 +301,8 @@ JS code was validated on [JSHint](https://jshint.com/ "JSHint"). some warnings w
 | As a user, I want the game to be tempting me to play again and get a better score | At the end of the quiz the user will be shown a button asking the user to play again| [Play again button](docs/user-story5-3.png "Play again")|
 | As a user, I want the instructions to be clear, concise and easily accessible| At the top right of home page there is a button "How to Play" by clicking on these the user can access clear and ordered steps of how to play the quiz|[How to Play](docs/user-story4.png "How to play")|
 | As a user, I want to receive immediate feedback on my quiz answers| When the quiz reaches the end a message will be displayed to tell the user how they did |[Feedback message](docs/user-story5-3.png "Feedback Message") |
+
+[Back to contents](#contents)
 
 ### Lighthouse Testing
 
@@ -262,14 +325,7 @@ Tests for Desktop Lighthouse Edge:
 Tests for Mobile on Lighthouse Edge:
 ![Lighthouse-Mobile-Edge-Index](docs/lighthouse-edge-phone.png "Lighthouse-Mobile-Edge-Index")
 
-
-
-
-
-
-
-
-
+[Back to contents](#contents)
 ## Deployment
 
 Geo detectives was deployed early in the process to GitHub pages via the following steps:
@@ -282,6 +338,7 @@ Geo detectives was deployed early in the process to GitHub pages via the followi
 
 Any changes required to the website, they can be made, committed and pushed to GitHub.
 
+[Back to contents](#contents)
 ### Fork the project
 Forking the GitHub repository allows you to create a duplicate of a local repository. This is done so that modifications to the copy can be performed without compromising the original repository.
 
@@ -300,8 +357,30 @@ Forking the GitHub repository allows you to create a duplicate of a local reposi
 - Change the current working directory to the location where you want the cloned directory.
 - Type git clone, and then paste the URL you copied earlier.
 - Press Enter to create your local clone.
+- 
+[Back to contents](#contents)
+### Credits
 
-## Credits
+1. My mentor advice and support:
+  - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin")
+
+2. Quiz Questions
+  - [Open Trivia DB](https://opentdb.com/ "Open Trivia DB")
+
+3. Code inspiration and learning content:
+  - [Love Maths Project](https://codeinstitute.net "Love Maths Project")
+  - [W3C Schools](https://www.w3schools.com/ "W3C Schools")
+  - [mdn](https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout)
+  - AI assitance from [Google Gemini](https://gemini.google.com) and [ChatGPT](https://chat.openai.com/)
+  - [CodePen](https://codepen.io/pen/ "CodePen")
+
+4. Media: 
+  - [James Q Quick](https://www.youtube.com/watch?v=u98ROZjBWy8&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx "YouTube")
+  - [Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k&t=991s)
+  - [Ali Aslan](https://www.youtube.com/watch?v=xZXW5SnCiWI&t=2450s "YoutTube")
+  - [Build Quiz App With HTML CSS & JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=1646s)
+
+[Back to contents](#contents)
 
 
 
