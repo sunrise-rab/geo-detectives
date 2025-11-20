@@ -49,7 +49,7 @@ The visuals, colour palette, and world-map background create an immersive atmosp
 
 As a parent, I understand how important it is to have tools that are safe, educational, and easy to use. My own children have been playing the quiz many times throughout the development process, and it has been amazing to see how quickly they learned new world facts, from capitals to famous landmarks and countries they had never heard of before. Watching them improve, get excited about their scores, and proudly share new information with me has been a big motivation for completing this project.
 
-[Back to contents](#contents)
+[Back to top](#contents)
 ## User Goals
 - Children want fun and challenging questions that can challenge their knowledge about geography subject.
 - Teachers want a tool that’s easy and fun to use in classrooms which create competition within the classroom students by saving palyers scores.
@@ -75,7 +75,7 @@ School children (Primary and secondary) who are developing their understanding o
 Teachers  looking for a quick, classroom-ready geography quiz that encourages curiosity and teamwork.
 Casual learners or quiz enthusiasts who enjoy testing their general knowledge about the world through timed challenges.
 
-## Wirefrmes
+## Wireframes
 Before starting the development of Geo Detectives, I created detailed wireframes using [Balsamiq Wireframes](https://balsamiq.com/) to plan the structure and layout of the website.
 These visual mockups helped me organise each section — from the home screen and quiz layout to the results and feedback screens — ensuring a simple and child-friendly experience across all devices.
 
