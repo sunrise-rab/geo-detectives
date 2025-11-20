@@ -4,7 +4,9 @@ Built with HTML, CSS, and JavaScript, the project uses the Open Trivia Database 
 
 ![Geo Detectives](docs/geo-detectives.png)
 
-[Table of Contents](#contents)
+## Table of Contents
+
+- [Geo Detectives](#geo-detectives)
   * [Rationale](#rationale)
   * [User Goals](#user-goals)
   * [User Stories](#user-stories)
@@ -49,7 +51,7 @@ The visuals, colour palette, and world-map background create an immersive atmosp
 
 As a parent, I understand how important it is to have tools that are safe, educational, and easy to use. My own children have been playing the quiz many times throughout the development process, and it has been amazing to see how quickly they learned new world facts, from capitals to famous landmarks and countries they had never heard of before. Watching them improve, get excited about their scores, and proudly share new information with me has been a big motivation for completing this project.
 
-[Back to top](#contents)
+[Back to contents](#contents)
 ## User Goals
 - Children want fun and challenging questions that can challenge their knowledge about geography subject.
 - Teachers want a tool that’s easy and fun to use in classrooms which create competition within the classroom students by saving palyers scores.
