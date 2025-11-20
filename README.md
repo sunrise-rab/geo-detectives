@@ -4,7 +4,7 @@ Built with HTML, CSS, and JavaScript, the project uses the Open Trivia Database 
 
 ![Geo Detectives](docs/geo-detectives.png)
 
-- [Table of Contents](#contents)
+[Table of Contents](#contents)
   * [Rationale](#rationale)
   * [User Goals](#user-goals)
   * [User Stories](#user-stories)
